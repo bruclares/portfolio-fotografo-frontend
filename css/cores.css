@@ -1,0 +1,88 @@
+/* Definição das cores no :root */
+:root {
+  /* Cores Primárias */
+  --color-primary: #ffffff;
+
+  /* Cores Secundárias */
+  --color-secondary: #f428f9;
+
+  /* Cores de Destaque */
+  --color-highlight: #b9ffff;
+
+  /* Outras Cores (com o mesmo grau de importância) */
+  --color-other-1: #936cd2;
+  --color-other-2: #00957a;
+  --color-other-3: #f2c196;
+  --color-other-4: #ff7433;
+  --color-other-5: #e3ffc0;
+  --color-other-6: #f1e86d;
+}
+
+/* Cores de Fundo e Texto - Utilitárias */
+
+/* Cores Primárias */
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.text-primary {
+  color: var(--color-primary);
+}
+
+/* Cores Secundárias */
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+/* Cores de Destaque */
+.bg-highlight {
+  background-color: var(--color-highlight);
+}
+.text-highlight {
+  color: var(--color-highlight);
+}
+
+/* Outras Cores (com o mesmo grau de importância) */
+.bg-other-1 {
+  background-color: var(--color-other-1);
+}
+.text-other-1 {
+  color: var(--color-other-1);
+}
+
+.bg-other-2 {
+  background-color: var(--color-other-2);
+}
+.text-other-2 {
+  color: var(--color-other-2);
+}
+
+.bg-other-3 {
+  background-color: var(--color-other-3);
+}
+.text-other-3 {
+  color: var(--color-other-3);
+}
+
+.bg-other-4 {
+  background-color: var(--color-other-4);
+}
+.text-other-4 {
+  color: var(--color-other-4);
+}
+
+.bg-other-5 {
+  background-color: var(--color-other-5);
+}
+.text-other-5 {
+  color: var(--color-other-5);
+}
+
+.bg-other-6 {
+  background-color: var(--color-other-6);
+}
+.text-other-6 {
+  color: var(--color-other-6);
+}
