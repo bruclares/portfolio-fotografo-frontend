@@ -6,41 +6,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aurora Espinosa</title>
 
-  <meta name="Aurora Espinosa">
-  <meta name="author" content="Aurora Espinosa">
-  <meta property="og:title" content="Aurora Espinosa">
-  <meta property="og:description" content="Aurora Espinosa">
+  <meta name="description"
+    content="Portfólio de Aurora Espinosa, fotógrafa especializada em retratos e colaborações artísticas.">
+  <meta property="og:title" content="Aurora Espinosa | Fotografia e Arte">
+  <meta property="og:description"
+    content="Conheça o trabalho de Aurora Espinosa, fotógrafa que captura emoções e momentos únicos.">
+  <!-- <meta property="og:image" content="URL_DA_IMAGEM_DE_DESTAQUE"> -->
+  <!-- <meta property="og:url" content="https://site.com"> -->
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Unlock&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-
+  <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-  <nav>
-    <a href="/" class="marca">A<span>urora</span>&nbsp;—&nbsp;E<span>spinosa</span></a>
-    <button class="toggle-menu">Menu</button>
-    <div class="menu">
-      <button class="toggle-menu">Fechar</button>
-      <ul>
-        <li><a href="./projetos">Projetos</a></li>
-        <li><a href="./retratos">Retratos</a></li>
-        <li><a href="./colabs">Colabs</a></li>
-        <li><a href="./contato">Contato</a></li>
-        <li><a href="./sobre">Sobre</a></li>
+  <header>
+    <nav class="container">
+      <div class="navbar text-secondary">
+        <a href="/" class="marca font-primary-md">
+          A<span>urora</span>&nbsp;—&nbsp;E<span>spinosa</span>
+        </a>
+        <button class="toggle-menu font-primary-md" aria-label="Abrir menu de navegação">Menu</button>
+      </div>
+      <ul class="menu-links font-primary-lg" role="menu">
+        <li role="menuitem"><a href="./projetos.html">Projetos</a></li>
+        <li role="menuitem"><a href="./retratos.html">Retratos</a></li>
+        <li role="menuitem"><a href="./colabs.html">Colabs</a></li>
+        <li role="menuitem"><a href="./contato.html">Contato</a></li>
+        <li role="menuitem"><a href="./sobre.html">Sobre</a></li>
       </ul>
-    </div>
+    </nav>
 
-  </nav>
+  </header>
 
+  <main class="container">
+    <h1 class="visually-hidden">Aurora Espinosa - Fotógrafa</h1>
+    <img src="/img/logo/logo-large.svg" alt="Logotipo oficial do portfólio de Aurora Espinosa">
 
-  <img src="/img/logo/logo-large.svg" alt="Logo da fotografa Aurora Espinosa">
-
-  <script src="./js/script.js"></script>
+  </main>
+  <script src="./js/script.js" defer></script>
 </body>
 
 </html>

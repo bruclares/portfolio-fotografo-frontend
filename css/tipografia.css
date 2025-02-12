@@ -1,0 +1,47 @@
+:root {
+  --font-primary: "Work Sans", sans-serif;
+  --font-secondary: "Unlock", sans-serif;
+}
+
+/* Fonte Work Sans - Tamanhos e pesos */
+.font-primary {
+  font-family: var(--font-primary);
+}
+
+.font-primary-lg {
+  font-family: var(--font-primary);
+  font-size: 6.667rem;
+  font-weight: bold;
+}
+
+.font-primary-md {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.font-primary-sm {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Fonte Unlock - Tamanho */
+.font-secondary {
+  font-family: var(--font-secondary);
+}
+
+.font-secondary-lg {
+  font-family: var(--font-secondary);
+  font-size: 3rem;
+  text-transform: lowercase;
+  letter-spacing: 0.5rem;
+}
+
+.font-secondary-md {
+  font-family: var(--font-secondary);
+  font-size: 2rem;
+  color: var(--color-other-2);
+  text-transform: lowercase;
+  letter-spacing: 1.4;
+}

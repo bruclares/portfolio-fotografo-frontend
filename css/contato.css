@@ -1,0 +1,53 @@
+.form-item ::placeholder {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-other-1);
+  text-transform: lowercase;
+}
+
+.form-item input,
+textarea {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  width: 40%;
+  padding: 10px 0;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid var(--color-highlight);
+  background: transparent;
+  color: #4d4d4d;
+  outline: none;
+  padding: 10px;
+  line-height: 1.5;
+}
+
+.form-item textarea {
+  background: var(--color-highlight);
+  height: 100px;
+  resize: none;
+  border-radius: 20px;
+}
+
+.form-item input:focus,
+textarea:focus {
+  border-bottom-color: #007bff;
+  transition: border-bottom-color 1s ease;
+}
+
+.form-botao {
+  transition: color 0.5s ease;
+}
+
+.form-botao:hover {
+  color: #00b894;
+}
+
+.contato {
+  cursor: pointer;
+  transition: color 0.5s ease;
+}
+
+.contato:hover {
+  color: #00b894;
+}

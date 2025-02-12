@@ -1,0 +1,76 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+blockquote,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+figure,
+figcaption,
+div,
+span,
+a,
+img,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+address {
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+button {
+  background: none; /* Remove o fundo */
+  border: none; /* Remove a borda */
+  padding: 0; /* Remove o padding */
+  margin: 0; /* Remove a margem */
+  font: inherit; /* Usa a fonte do elemento pai */
+  color: inherit; /* Usa a cor do texto do elemento pai */
+  cursor: pointer; /* Mantém o cursor de ponteiro */
+  outline: none; /* Remove o contorno ao focar */
+}

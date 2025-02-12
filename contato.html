@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurora Espinosa</title>
+
+  <meta name="Aurora Espinosa">
+  <meta name="author" content="Aurora Espinosa">
+  <meta property="og:title" content="Aurora Espinosa">
+  <meta property="og:description" content="Aurora Espinosa">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Unlock&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="bg-other-6">
+  <header>
+    <div class="menu bg-other-1 text-highlight">
+      <div class="container">
+        <button class="close-menu toggle-menu font-primary-md text-highlight">
+          Fechar
+        </button>
+        <ul class="font-primary-lg menu-links" role="menu">
+          <li role="menuitem"><a href="./projetos.html">Projetos</a></li>
+          <li role="menuitem"><a href="./retratos.html">Retratos</a></li>
+          <li role="menuitem"><a href="./colabs.html">Colabs</a></li>
+          <li role="menuitem"><a href="./contato.html">Contato</a></li>
+          <li role="menuitem"><a href="./sobre.html">Sobre</a></li>
+        </ul>
+
+      </div>
+    </div>
+    <nav class="container">
+      <div class="navegacao">
+        <a href="/" class="marca text-secondary font-primary-md">
+          A<span>urora</span>&nbsp;—&nbsp;E<span>spinosa</span>
+        </a>
+        <button class="toggle-menu text-secondary font-primary-md" aria-label="Abrir menu de navegação">Menu</button>
+
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section aria-label="Contato de Aurora Espinosa">
+      <address aria-label="Contato de Aurora Espinosa">
+        <ul role="contato">
+          <li role="contatoitem" class="contato text-other-2 font-secondary-lg"><a
+              href="./"></a>instagram:<br>@aurora_espinosa
+          </li>
+          <li role="contatoitem" class="contato text-other-2 font-secondary-lg"><a
+              href="mailto:contato@aurora.com.br"></a>email:<br>contato@aurora.com.br
+          </li>
+          <li role="contatoitem" class="contato text-other-2 font-secondary-lg"><a
+              href="https://wa.me/5511999999999">telefone:<br>(11)
+              99999-9999</a></li>
+        </ul>
+      </address>
+    </section>
+
+    <h1 class="text-other-2 font-secondary-lg">Conte-me como posso te ajudar!</h1>
+
+    <section aria-label="Formulário para envio de mensagem">
+      <form id="form-contato" action="./contato.html">
+        <div class="form-item">
+          <label for="nome"></label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required minlength="2" maxlength="50">
+        </div>
+        <div class="form-item">
+          <label for="telefone"></label>
+          <input type="tel" id="telefone" name="telefone" placeholder="11 99999-9999" required>
+        </div>
+
+        <div class="form-item">
+          <label for="email"></label>
+          <input type="email" id="email" name="email" placeholder="contato@email.com.br" required>
+        </div>
+        <div class="form-item">
+          <label for="mensagem"></label>
+          <textarea rows="1" id="mensagem" name="mensagem" placeholder="O que você precisa?" required minlength="10"
+            maxlength="500"></textarea>
+          <div class="line"></div>
+        </div>
+        <button type="submit" class="form-botao font-secondary-md" aria-label="Botão que envia mensagem">Enviar
+          Mensagem</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
