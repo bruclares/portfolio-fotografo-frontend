@@ -24,7 +24,7 @@ textarea {
 
 .form-item textarea {
   background: var(--color-highlight);
-  height: 100px;
+  height: 200px;
   resize: none;
   border-radius: 20px;
 }
@@ -50,4 +50,41 @@ textarea:focus {
 
 .contato:hover {
   color: #00b894;
+}
+
+.contato-lista {
+  display: flex;
+  flex-direction: column;
+}
+
+.contato {
+  display: flex;
+  flex-direction: column;
+}
+
+.contato-email {
+  margin-bottom: -50px;
+}
+
+.contato-email,
+.contato-telefone {
+  margin-left: 500px;
+}
+
+.contato-rede-social,
+.form-header {
+  margin-top: 3rem;
+  margin-left: 65px;
+  margin-bottom: 3rem;
+}
+.contato-telefone {
+  margin-bottom: 3rem;
+}
+
+.form-item {
+  margin-left: 65px;
+}
+
+.form-botao {
+  margin-left: 300px;
 }

@@ -6,10 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aurora Espinosa</title>
 
-  <meta name="Aurora Espinosa">
-  <meta name="author" content="Aurora Espinosa">
-  <meta property="og:title" content="Aurora Espinosa">
-  <meta property="og:description" content="Aurora Espinosa">
+  <meta name="description"
+    content="Portfólio de Aurora Espinosa, fotógrafa especializada em retratos e colaborações artísticas.">
+  <meta property="og:title" content="Aurora Espinosa | Fotografia e Arte">
+  <meta property="og:description"
+    content="Conheça o trabalho de Aurora Espinosa, fotógrafa que captura emoções e momentos únicos.">
+  <!-- <meta property="og:image" content="URL_DA_IMAGEM_DE_DESTAQUE"> -->
+  <!-- <meta property="og:url" content="https://site.com"> -->
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,50 +26,45 @@
 
 <body class="bg-other-6">
   <header>
-    <div class="menu bg-other-1 text-highlight">
-      <div class="container">
-        <button class="close-menu toggle-menu font-primary-md text-highlight">
-          Fechar
-        </button>
-        <ul class="font-primary-lg menu-links" role="menu">
-          <li role="menuitem"><a href="./projetos.html">Projetos</a></li>
-          <li role="menuitem"><a href="./retratos.html">Retratos</a></li>
-          <li role="menuitem"><a href="./colabs.html">Colabs</a></li>
-          <li role="menuitem"><a href="./contato.html">Contato</a></li>
-          <li role="menuitem"><a href="./sobre.html">Sobre</a></li>
-        </ul>
-
-      </div>
-    </div>
     <nav class="container">
-      <div class="navegacao">
-        <a href="/" class="marca text-secondary font-primary-md">
+      <div class="navbar text-secondary">
+        <a href="/" class="marca font-primary-md">
           A<span>urora</span>&nbsp;—&nbsp;E<span>spinosa</span>
         </a>
-        <button class="toggle-menu text-secondary font-primary-md" aria-label="Abrir menu de navegação">Menu</button>
-
+        <button class="toggle-menu font-primary-md" aria-label="Abrir menu de navegação">Menu</button>
       </div>
+      <ul class="menu-links font-primary-lg" role="menu">
+        <li class="item-projetos" role="menuitem"><a href="./projetos.html">Projetos</a></li>
+        <li class="item-retratos" role="menuitem"><a href="./retratos.html">Retratos</a></li>
+        <li class="item-colab" role="menuitem"><a href="./colabs.html">Colabs</a></li>
+        <li class="item-contato" role="menuitem"><a href="./contato.html">Contato</a></li>
+        <li class="item-sobre" role="menuitem"><a href="./sobre.html">Sobre</a></li>
+      </ul>
     </nav>
+
   </header>
 
   <main class="container">
     <section aria-label="Contato de Aurora Espinosa">
-      <address aria-label="Contato de Aurora Espinosa">
+
+      <address class="contato-lista" aria-label="Contato de Aurora Espinosa">
+
         <ul role="contato">
-          <li role="contatoitem" class="contato text-other-2 font-secondary-lg"><a
+          <li role="contatoitem" class="contato contato-rede-social text-other-2 font-secondary-lg"><a
               href="./"></a>instagram:<br>@aurora_espinosa
           </li>
-          <li role="contatoitem" class="contato text-other-2 font-secondary-lg"><a
-              href="mailto:contato@aurora.com.br"></a>email:<br>contato@aurora.com.br
+          <li role="contatoitem" class="contato contato-email text-other-2 font-secondary-lg"><a
+              href="mailto:contato@aurora.com.br"></a><br>contato@aurora.com.br
           </li>
-          <li role="contatoitem" class="contato text-other-2 font-secondary-lg"><a
-              href="https://wa.me/5511999999999">telefone:<br>(11)
+          <li role="contatoitem" class="contato contato-telefone text-other-2 font-secondary-lg"><a
+              href="https://wa.me/5511999999999"><br>(11)
               99999-9999</a></li>
         </ul>
+
       </address>
     </section>
 
-    <h1 class="text-other-2 font-secondary-lg">Conte-me como posso te ajudar!</h1>
+    <h1 class="form-header text-other-2 font-secondary-lg">Conte-me como posso te ajudar!</h1>
 
     <section aria-label="Formulário para envio de mensagem">
       <form id="form-contato" action="./contato.html">
