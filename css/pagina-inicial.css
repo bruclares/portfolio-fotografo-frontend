@@ -11,6 +11,7 @@
 
 body.menu-open {
   overflow: hidden;
+  background-color: var(--color-other-1);
 }
 
 .navbar {
@@ -53,6 +54,7 @@ body.menu-open {
   background-color: var(--color-other-1);
   color: var(--color-highlight);
   z-index: 2;
+  margin-top: 3rem;
 }
 
 .menu-links.show {
@@ -64,7 +66,38 @@ body.menu-open {
   align-self: flex-end;
 }
 
+.menu-links li:hover {
+  transform: translateX(-5px);
+  transition: transform 0.3s ease-in-out;
+}
+
 main {
   position: relative;
   z-index: 1;
+}
+
+main img {
+  margin-top: 3rem;
+}
+
+.item-colab {
+  margin-left: 240px;
+  margin-bottom: -30px;
+}
+
+.item-contato {
+  margin-right: 240px;
+  margin-bottom: -30px;
+}
+
+.item-retratos {
+  margin-right: 90px;
+  margin-bottom: -30px;
+}
+.item-projetos {
+  margin-left: 60px;
+  margin-bottom: -30px;
+}
+.item-sobre {
+  margin-left: 100px;
 }
