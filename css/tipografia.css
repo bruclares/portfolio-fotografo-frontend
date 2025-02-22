@@ -22,7 +22,7 @@
 
 .font-primary-sm {
   font-family: var(--font-primary);
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -40,7 +40,7 @@
 
 .font-secondary-md {
   font-family: var(--font-secondary);
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--color-other-2);
   text-transform: lowercase;
   letter-spacing: 1.4;
