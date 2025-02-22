@@ -8,6 +8,6 @@ toggleMenuButton.addEventListener("click", function () {
   document.body.classList.toggle("menu-open");
 
   const navbar = document.querySelector(".navbar");
+  navbar.classList.toggle("text-primary");
   navbar.classList.toggle("text-secondary");
-  navbar.classList.toggle("text-highlight");
 });
