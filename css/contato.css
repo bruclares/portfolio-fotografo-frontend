@@ -1,46 +1,58 @@
+.bg-contato {
+  background-color: #f9f9f9;
+}
+
 .form-item ::placeholder {
   font-family: var(--font-primary);
   font-size: 1rem;
   font-weight: bold;
-  color: var(--color-other-1);
+  color: rgba(58, 134, 255, 0.7);
   text-transform: lowercase;
 }
 
 .form-item input,
-textarea {
+.form-item textarea {
   font-family: var(--font-primary);
-  font-size: 1rem;
-  width: 40%;
-  padding: 10px 0;
-  margin: 10px 0;
-  border: none;
-  border-bottom: 2px solid var(--color-highlight);
-  background: transparent;
-  color: #4d4d4d;
-  outline: none;
+  font-size: 1.2rem;
+  width: 60%;
   padding: 10px;
+  margin: 10px 0;
+  border: 2px solid var(--color-other-3);
+  background: #f9f9f9;
+  color: var(--color-secondary);
+  outline: none;
+  border-radius: 8px;
   line-height: 1.5;
 }
 
+/* Textarea */
 .form-item textarea {
-  background: var(--color-highlight);
-  height: 200px;
-  resize: none;
-  border-radius: 20px;
+  background: f9f9f9;
+  color: #ffffff;
+  resize: vertical;
+  padding: 10px;
 }
 
 .form-item input:focus,
-textarea:focus {
-  border-bottom-color: #007bff;
-  transition: border-bottom-color 1s ease;
+.form-item textarea:focus {
+  border-color: var(--color-other-1);
+  transition: border-color 0.5s ease;
 }
 
 .form-botao {
-  transition: color 0.5s ease;
+  background-color: var(--color-primary);
+  color: #f9f9f9;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 8px;
+  font-weight: bold;
 }
 
 .form-botao:hover {
-  color: #00b894;
+  background-color: var(--color-other-2); /* Azul elétrico */
+  transform: scale(1.05);
 }
 
 .contato {
@@ -49,7 +61,32 @@ textarea:focus {
 }
 
 .contato:hover {
-  color: #00b894;
+  color: var(--color-primary);
+}
+
+.alert {
+  display: none;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+  font-family: var(--font-primary);
+  width: max-content;
+}
+
+.alert.show {
+  display: block;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
 }
 
 .contato-lista {
@@ -63,28 +100,23 @@ textarea:focus {
 }
 
 .contato-email {
-  margin-bottom: -50px;
-}
-
-.contato-email,
-.contato-telefone {
   margin-left: 500px;
+  margin-bottom: 3rem;
 }
 
 .contato-rede-social,
-.form-header {
+.form-header,
+.alert {
   margin-top: 3rem;
   margin-left: 65px;
   margin-bottom: 3rem;
 }
 .contato-telefone {
+  margin-left: 65px;
   margin-bottom: 3rem;
 }
 
-.form-item {
-  margin-left: 65px;
-}
-
+.form-item,
 .form-botao {
-  margin-left: 300px;
+  margin-left: 65px;
 }
