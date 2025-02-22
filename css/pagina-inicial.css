@@ -11,7 +11,7 @@
 
 body.menu-open {
   overflow: hidden;
-  background-color: var(--color-other-1);
+  background-color: var(--color-highlight);
 }
 
 .navbar {
@@ -51,8 +51,8 @@ body.menu-open {
   top: 0;
   width: 100vw;
   height: 100vh;
-  background-color: var(--color-other-1);
-  color: var(--color-highlight);
+  background-color: var(--color-highlight);
+  color: var(--color-secondary);
   z-index: 2;
   margin-top: 3rem;
 }
