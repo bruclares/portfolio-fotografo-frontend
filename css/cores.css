@@ -1,25 +1,15 @@
 :root {
-  /* Cores Primárias */
-  --color-primary: #ffffff;
+  --color-primary: #f428f9;
 
-  /* Cores Secundárias */
-  --color-secondary: #f428f9;
+  --color-secondary: #1a1a2e;
 
-  /* Cores de Destaque */
-  --color-highlight: #b9ffff;
+  --color-highlight: #ff9f1c;
 
-  /* Outras Cores (com o mesmo grau de importância) */
-  --color-other-1: #936cd2;
-  --color-other-2: #00957a;
-  --color-other-3: #f2c196;
-  --color-other-4: #ff7433;
-  --color-other-5: #e3ffc0;
-  --color-other-6: #f1e86d;
+  --color-other-1: #3a86ff;
+  --color-other-2: #ff006e;
+  --color-other-3: #8338ec;
 }
 
-/* Cores de Fundo e Texto */
-
-/* Cores Primárias */
 .bg-primary {
   background-color: var(--color-primary);
 }
@@ -27,7 +17,6 @@
   color: var(--color-primary);
 }
 
-/* Cores Secundárias */
 .bg-secondary {
   background-color: var(--color-secondary);
 }
@@ -35,7 +24,6 @@
   color: var(--color-secondary);
 }
 
-/* Cores de Destaque */
 .bg-highlight {
   background-color: var(--color-highlight);
 }
@@ -43,7 +31,6 @@
   color: var(--color-highlight);
 }
 
-/* Outras Cores (com o mesmo grau de importância) */
 .bg-other-1 {
   background-color: var(--color-other-1);
 }
@@ -63,25 +50,4 @@
 }
 .text-other-3 {
   color: var(--color-other-3);
-}
-
-.bg-other-4 {
-  background-color: var(--color-other-4);
-}
-.text-other-4 {
-  color: var(--color-other-4);
-}
-
-.bg-other-5 {
-  background-color: var(--color-other-5);
-}
-.text-other-5 {
-  color: var(--color-other-5);
-}
-
-.bg-other-6 {
-  background-color: var(--color-other-6);
-}
-.text-other-6 {
-  color: var(--color-other-6);
 }
