@@ -1,4 +1,8 @@
 const toggleMenuButton = document.querySelector(".toggle-menu");
+const navbar = document.querySelector(".navbar");
+const corPadrao = Array.from(navbar.classList).find((classe) =>
+  classe.includes("text-")
+);
 
 toggleMenuButton.addEventListener("click", function () {
   const menu = document.querySelector(".menu-links");
@@ -7,7 +11,8 @@ toggleMenuButton.addEventListener("click", function () {
     toggleMenuButton.innerText == "Menu" ? "Fechar" : "Menu";
   document.body.classList.toggle("menu-open");
 
-  const navbar = document.querySelector(".navbar");
-  navbar.classList.toggle("text-primary");
+  console.log(corPadrao);
+
+  navbar.classList.toggle(corPadrao);
   navbar.classList.toggle("text-secondary");
 });

@@ -7,7 +7,7 @@ formulario.addEventListener("submit", async function (event) {
   const dados = Object.fromEntries(dadosFormulario.entries());
 
   try {
-    let resposta = await fetch("http://127.0.0.1:5000/api/contatos", {
+    let resposta = await fetch("http://127.0.0.1:5000/api/contatos/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
