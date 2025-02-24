@@ -1,0 +1,90 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 3;
+}
+
+.marca {
+  display: inline-flex;
+  white-space: nowrap;
+}
+
+.marca span {
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  transition: opacity 1.5s, max-width 1.5s;
+}
+
+.marca:hover span {
+  opacity: 1;
+  max-width: 100%;
+}
+
+.toggle-menu {
+  text-transform: capitalize;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.menu-links {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-highlight);
+  color: var(--color-secondary);
+  z-index: 2;
+  margin-top: 5rem;
+}
+
+.menu-links.show {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-links li {
+  align-self: center;
+  letter-spacing: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-links li:nth-child(even):hover {
+  transform: translateX(20px);
+}
+
+.menu-links li:nth-child(odd):hover {
+  transform: translateX(20px);
+  /* transition: transform 1s ease-in-out; */
+}
+
+.item-projetos {
+  margin-right: 50%;
+  margin-bottom: -30px;
+}
+
+.item-colab {
+  margin-left: -10%;
+  margin-bottom: -30px;
+}
+
+.item-contato {
+  margin-right: 60%;
+  margin-bottom: -30px;
+}
+
+.item-retratos {
+  margin-left: 50%;
+  margin-bottom: -30px;
+}
+
+.item-sobre {
+  margin-left: 30%;
+}
+
+button {
+  letter-spacing: 3px;
+}
