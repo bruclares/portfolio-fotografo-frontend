@@ -1,13 +1,14 @@
 :root {
   --color-primary: #f428f9;
 
-  --color-secondary: #1a1a2e;
+  --color-secondary: #2e2e4d;
 
   --color-highlight: #ff9f1c;
 
   --color-other-1: #3a86ff;
   --color-other-2: #ff006e;
   --color-other-3: #8338ec;
+  --color-other-4: var(--color-other-4);
 }
 
 .bg-primary {
@@ -50,4 +51,11 @@
 }
 .text-other-3 {
   color: var(--color-other-3);
+}
+
+.bg-other-4 {
+  background-color: var(--color-other-4);
+}
+.text-other-4 {
+  color: var(--color-other-4);
 }

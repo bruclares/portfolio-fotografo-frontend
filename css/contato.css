@@ -1,5 +1,5 @@
 .bg-contato {
-  background-color: #f9f9f9;
+  background-color: var(--color-other-4);
 }
 
 .form-item ::placeholder {
@@ -18,7 +18,7 @@
   padding: 10px;
   margin: 10px 0;
   border: 2px solid var(--color-other-3);
-  background: #f9f9f9;
+  background: var(--color-other-4);
   color: var(--color-secondary);
   outline: none;
   border-radius: 8px;
@@ -28,7 +28,7 @@
 /* Textarea */
 .form-item textarea {
   background: f9f9f9;
-  color: #ffffff;
+  color: var(--color-secondary);
   resize: vertical;
   padding: 10px;
 }
@@ -41,7 +41,7 @@
 
 .form-botao {
   background-color: var(--color-primary);
-  color: #f9f9f9;
+  color: var(--color-other-4);
   border: none;
   padding: 12px 24px;
   cursor: pointer;

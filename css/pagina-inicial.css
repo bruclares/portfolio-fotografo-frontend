@@ -14,63 +14,6 @@ body.menu-open {
   background-color: var(--color-highlight);
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  z-index: 3;
-}
-
-.marca {
-  display: inline-flex;
-  white-space: nowrap;
-}
-
-.marca span {
-  opacity: 0;
-  max-width: 0;
-  overflow: hidden;
-  transition: opacity 1.5s, max-width 1.5s;
-}
-
-.marca:hover span {
-  opacity: 1;
-  max-width: 100%;
-}
-
-.toggle-menu {
-  text-transform: capitalize;
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
-}
-
-.menu-links {
-  display: none;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--color-highlight);
-  color: var(--color-secondary);
-  z-index: 2;
-  margin-top: 3rem;
-}
-
-.menu-links.show {
-  display: flex;
-  flex-direction: column;
-}
-
-.menu-links li:nth-child(even) {
-  align-self: flex-end;
-}
-
-.menu-links li:hover {
-  transform: translateX(-5px);
-  transition: transform 0.3s ease-in-out;
-}
-
 main {
   position: relative;
   z-index: 1;
@@ -78,26 +21,4 @@ main {
 
 main img {
   margin-top: 3rem;
-}
-
-.item-colab {
-  margin-left: 240px;
-  margin-bottom: -30px;
-}
-
-.item-contato {
-  margin-right: 240px;
-  margin-bottom: -30px;
-}
-
-.item-retratos {
-  margin-right: 90px;
-  margin-bottom: -30px;
-}
-.item-projetos {
-  margin-left: 60px;
-  margin-bottom: -30px;
-}
-.item-sobre {
-  margin-left: 100px;
 }
