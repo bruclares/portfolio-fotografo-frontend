@@ -1,10 +1,6 @@
 .container {
-  margin: 15px;
-  /* padding: 1.25rem; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  max-width: 2142px;
-  /* margin-left: auto; */
-  /* margin-right: auto; */
-  /* min-height: 100vh;s */
+  padding-inline: 15px;
+  /* height: 100%; */
+  max-width: 1300px;
+  margin-inline: auto;
 }

@@ -3,6 +3,7 @@
   justify-content: space-between;
   position: relative;
   z-index: 3;
+  padding-top: 0.5rem;
 }
 
 .marca {
@@ -22,10 +23,6 @@
   max-width: 100%;
 }
 
-button {
-  letter-spacing: 3px;
-}
-
 .toggle-menu {
   text-transform: capitalize;
   background-color: transparent;
@@ -43,12 +40,12 @@ button {
   background-color: var(--color-highlight);
   color: var(--color-secondary);
   z-index: 2;
-  padding-top: 5rem;
 }
 
 .menu-links.show {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .menu-links li {
@@ -58,9 +55,6 @@ button {
   line-height: 0.8;
 }
 
-.menu-links li:nth-child(odd) {
-  width: 50%;
-}
 .menu-links li:nth-child(even) {
   align-self: flex-end;
 }
@@ -70,10 +64,7 @@ button {
   color: var(--color-other-2);
 }
 
-.item-sobre {
-  margin-left: 5%;
-}
-
+.item-sobre,
 .item-projetos {
   margin-left: 5%;
 }
@@ -89,9 +80,35 @@ button {
   margin-left: 15%;
 }
 
-@media (min-width: 2142px) {
+@media (max-width: 1280px) {
   .menu-links.show {
-    padding-top: 0;
-    justify-self: center;
+    row-gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-links.show {
+    row-gap: 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-links.show {
+    padding-left: 15px;
+  }
+
+  .item-sobre,
+  .item-projetos,
+  .item-colab {
+    margin-left: 0;
+  }
+
+  .item-retratos,
+  .item-contato {
+    padding-right: 0;
+  }
+
+  .menu-links li:nth-child(even) {
+    align-self: flex-start;
   }
 }
