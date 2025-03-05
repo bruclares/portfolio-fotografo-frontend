@@ -8,7 +8,7 @@
   --color-other-1: #3a86ff;
   --color-other-2: #ff006e;
   --color-other-3: #8338ec;
-  --color-other-4: var(--color-other-4);
+  --color-other-4: #f9f9f9;
 }
 
 .bg-primary {

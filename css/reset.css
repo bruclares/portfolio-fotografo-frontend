@@ -13,26 +13,15 @@ li,
 dl,
 dt,
 dd,
-figure,
-figcaption,
 div,
 span,
 a,
-img,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td {
+img {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  /* font-size: 100%; */
   font: inherit;
-  vertical-align: baseline;
   box-sizing: border-box;
 }
 
@@ -52,11 +41,6 @@ img {
   height: auto;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
 address {
   font-style: normal;
   margin: 0;
@@ -65,12 +49,12 @@ address {
 }
 
 button {
-  background: none; /* Remove o fundo */
-  border: none; /* Remove a borda */
-  padding: 0; /* Remove o padding */
-  margin: 0; /* Remove a margem */
-  font: inherit; /* Usa a fonte do elemento pai */
-  color: inherit; /* Usa a cor do texto do elemento pai */
-  cursor: pointer; /* Mantém o cursor de ponteiro */
-  outline: none; /* Remove o contorno ao focar */
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
 }
