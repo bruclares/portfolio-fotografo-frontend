@@ -1,3 +1,4 @@
+/* Estilos para a Barra de Navegação */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -6,6 +7,7 @@
   padding-top: 0.5rem;
 }
 
+/* Estilos para a Marca/Logo */
 .marca {
   display: inline-flex;
   white-space: nowrap;
@@ -23,6 +25,7 @@
   max-width: 100%;
 }
 
+/* Botão para Alternar Menu */
 .toggle-menu {
   text-transform: capitalize;
   background-color: transparent;
@@ -30,6 +33,7 @@
   cursor: pointer;
 }
 
+/* Estilos para os Links do Menu */
 .menu-links {
   display: none;
   position: fixed;
@@ -58,12 +62,14 @@
 .menu-links li:nth-child(even) {
   align-self: flex-end;
 }
+
 .menu-links li:hover,
 .menu-links li.ativo {
   transform: scale(1.05);
   color: var(--color-other-2);
 }
 
+/* Ajustes Individuais dos Itens do Menu */
 .item-sobre,
 .item-projetos {
   margin-left: 5%;
@@ -72,6 +78,7 @@
 .item-retratos {
   padding-right: 5%;
 }
+
 .item-contato {
   padding-right: 15%;
 }
@@ -80,6 +87,7 @@
   margin-left: 15%;
 }
 
+/* Media Queries para Responsividade */
 @media (max-width: 1280px) {
   .menu-links.show {
     row-gap: 10px;
