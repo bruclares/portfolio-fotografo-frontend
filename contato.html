@@ -11,11 +11,9 @@
   <meta property="og:title" content="Aurora Espinosa | Fotografia e Arte">
   <meta property="og:description"
     content="Conheça o trabalho de Aurora Espinosa, fotógrafa que captura emoções e momentos únicos.">
-  <!-- <meta property="og:image" content="URL_DA_IMAGEM_DE_DESTAQUE"> -->
-  <!-- <meta property="og:url" content="https://site.com"> -->
 
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" href="./img/favicon.svg" type="image/svg+xml" width="64" height="64" <link rel="preconnect"
+    href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Unlock&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
@@ -26,41 +24,37 @@
 
 <body class="bg-contato">
   <header>
-    <nav class="container">
+    <nav class="container" role="navigation">
       <div class="navbar text-other-2">
         <a href="/" class="marca font-primary-md">
           A<span>urora</span>&nbsp;—&nbsp;E<span>spinosa</span>
         </a>
         <button class="toggle-menu font-primary-md" aria-label="Abrir menu de navegação">Menu</button>
       </div>
-      <div class="container-menu">
-        <ul class="menu-links font-primary-lg" role="menu">
-          <li class="item-projetos" role="menuitem"><a href="./projetos.html">Projetos</a></li>
-          <li class="item-retratos" role="menuitem"><a href="./retratos.html">Retratos</a></li>
-          <li class="item-colab" role="menuitem"><a href="./colabs.html">Colabs</a></li>
-          <li class="item-contato ativo" role="menuitem"><a href="./contato.html">Contato</a></li>
-          <li class="item-sobre" role="menuitem"><a href="./sobre.html">Sobre</a></li>
-        </ul>
-      </div>
-
+      <ul class="menu-links font-primary-lg">
+        <li class="item-projetos"><a href="./projetos.html">Projetos</a></li>
+        <li class="item-retratos"><a href="./retratos.html">Retratos</a></li>
+        <li class="item-colab"><a href="./colabs.html">Colabs</a></li>
+        <li class="item-contato ativo"><a href="./contato.html">Contato</a></li>
+        <li class="item-sobre"><a href="./sobre.html">Sobre</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
     <section class="container" aria-label="Contato de Aurora Espinosa">
-
-      <address aria-label="Contato de Aurora Espinosa">
-        <div class="contato-lista">
-          <div class="contato contato-rede-social text-other-2 font-secondary-lg"><a
+      <address>
+        <ul class="contato-lista">
+          <li class="contato contato-rede-social text-other-2 font-secondary-lg"><a
               href="./"></a>instagram:<br>@aurora_espinosa
-          </div>
-          <div class="contato contato-email text-other-2 font-secondary-lg"><a
+          </li>
+          <li class="contato contato-email text-other-2 font-secondary-lg"><a
               href="mailto:contato@aurora.com.br"></a>e-mail:<br>contato@aurora.com.br
-          </div>
-          <div class="contato contato-telefone text-other-2 font-secondary-lg"><a
+          </li>
+          <li class="contato contato-telefone text-other-2 font-secondary-lg"><a
               href="https://wa.me/5511999999999">telefone:<br>(11)
-              99999-9999</a></div>
-        </div>
+              99999-9999</a></li>
+        </ul>
       </address>
     </section>
 
@@ -70,25 +64,25 @@
 
       <form id="form-contato">
         <div class="form-item">
-          <label for="nome"></label>
+          <label for="nome" class="visually-hidden">Nome completo</label>
           <input type="text" id="nome" name="nome" placeholder="Seu nome" minlength="2" maxlength="50">
         </div>
         <div class="form-item">
-          <label for="telefone"></label>
+          <label for="telefone" class="visually-hidden">Telefone</label>
           <input type="tel" id="telefone" name="telefone" placeholder="11 99999-9999">
         </div>
 
         <div class="form-item">
-          <label for="email"></label>
+          <label for="email" class="visually-hidden">E-mail</label>
           <input type="email" id="email" name="email" placeholder="contato@email.com.br">
         </div>
         <div class="form-item">
-          <label for="mensagem"></label>
+          <label for="mensagem" class="visually-hidden">Mensagem</label>
           <textarea rows="4" id="mensagem" name="mensagem" placeholder="O que você precisa?" minlength="10"
             maxlength="500"></textarea>
           <div class="line"></div>
         </div>
-        <button type="submit" class="form-botao font-secondary-md" aria-label="Botão que envia mensagem">Enviar
+        <button type="submit" class="form-botao font-secondary-md">Enviar
           Mensagem</button>
       </form>
     </section>
