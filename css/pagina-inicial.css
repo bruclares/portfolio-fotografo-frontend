@@ -1,13 +1,13 @@
-main {
-  /* flex-direction: column; */
+.container-logo {
   flex: 1;
   position: relative;
   z-index: 1;
-  /* height: 100%; */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* min-height: 95vh; */
+  padding-inline: 15px;
+  max-width: 1300px;
+  margin-inline: auto;
 }
 
 .logo {
