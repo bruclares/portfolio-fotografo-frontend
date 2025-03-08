@@ -67,7 +67,7 @@ O projeto é composto por três camadas principais:
 1. **Integração com API Externa**: Uso da API do Google Fotos para carregar as fotos dinamicamente.
 2. **Design Responsivo e Moderno**: Foco em UX/Design Thinking para criar uma experiência agradável para os usuários.
 3. **Deploy Contínuo**: Utilização da Vercel para garantir que o site esteja sempre atualizado.
-4. **Boas Práticas**: Uso de commits semânticos, versionamento no GitHub e testes automatizados.
+4. **Boas Práticas**: Uso de commits semânticos, versionamento no GitHub.
 
 ## Links
 
