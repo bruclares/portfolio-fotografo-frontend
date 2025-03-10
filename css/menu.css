@@ -87,7 +87,7 @@
   margin-left: 15%;
 }
 
-/* Media Queries para Responsividade */
+/* Responsividade */
 @media (max-width: 1280px) {
   .menu-links.show {
     row-gap: 10px;
