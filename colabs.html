@@ -11,11 +11,9 @@
   <meta property="og:title" content="Aurora Espinosa | Fotografia e Arte">
   <meta property="og:description"
     content="Conheça o trabalho de Aurora Espinosa, fotógrafa que captura emoções e momentos únicos.">
-  <!-- <meta property="og:image" content="URL_DA_IMAGEM_DE_DESTAQUE"> -->
-  <!-- <meta property="og:url" content="https://site.com"> -->
 
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" href="./img/favicon.svg" type="image/svg+xml" width="64" height="64" <link rel="preconnect"
+    href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Unlock&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
@@ -24,8 +22,35 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
-  <h1>EM CONSTRUÇÃO!!!</h1>
+<body class="bg-other-2">
+  <header>
+    <nav class="container" role="navigation">
+      <div class="navbar text-secondary ">
+        <a href="/" class="marca font-primary-md">
+          A<span>urora</span>&nbsp;—&nbsp;E<span>spinosa</span>
+        </a>
+        <button class="toggle-menu font-primary-md" aria-label="Abrir menu de navegação">Menu</button>
+      </div>
+      <ul class="menu-links font-primary-lg">
+        <li class="item-projetos"><a href="./projetos.html">Projetos</a></li>
+        <li class="item-retratos"><a href="./retratos.html">Retratos</a></li>
+        <li class="item-colab ativo"><a href="./colabs.html">Colabs</a></li>
+        <li class="item-contato"><a href="./contato.html">Contato</a></li>
+        <li class="item-sobre"><a href="./sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container-projetos">
+    <section class="container">
+      <h1 class="text-secondary  font-primary-lg">Colabs</h1>
+      <div class="galeria-imagens" data-pasta="colabs" id="galeria-imagens"></div>
+      <button class="proxima-pagina">Carregar mais</button>
+    </section>
+  </main>
+
+  <script src="./js/script.js"></script>
+  <script src="./js/fotos.js"></script>
 </body>
 
 </html>

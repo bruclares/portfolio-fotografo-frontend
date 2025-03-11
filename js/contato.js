@@ -7,13 +7,16 @@ formulario.addEventListener("submit", async function (event) {
   const dados = Object.fromEntries(dadosFormulario.entries());
 
   try {
-    let resposta = await fetch("http://127.0.0.1:5000/api/contatos/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(dados),
-    });
+    let resposta = await fetch(
+      "https://portfolio-fotografo-backend.vercel.app/api/contatos/",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dados),
+      }
+    );
 
     resposta = await resposta.json();
 

@@ -8,10 +8,11 @@ let todasFotos = [];
 let fotoAtualIndex = 0;
 
 // Função para obter as fotos do servidor
-function obterFotos() {
-  // Criando o objeto de dados para enviar ao servidor
+function obterFotos(pasta) {
+  // Criando o objeto de dados para enviar ao servidor - Dados da requisição
   const dados = {
     next_cursor: proximaPagina,
+    pasta: pasta, // Adiciona o nome da pasta ao objeto de dados
   };
 
   // Exibir indicador de carregamento
@@ -32,7 +33,7 @@ function obterFotos() {
     })
     .then(function (dados) {
       // Obtém o elemento da galeria onde as fotos serão exibidas
-      const galeria = document.getElementById("galeria-projetos");
+      const galeria = document.getElementById("galeria-imagens");
 
       // Para cada foto retornada, cria os elementos HTML
       dados.fotos.forEach(function (foto) {
@@ -228,13 +229,14 @@ function atualizarFotoLightbox() {
 
 // Quando a página for carregada
 document.addEventListener("DOMContentLoaded", function () {
-  // Carrega as primeiras fotos
-  obterFotos();
+  const galeria = document.getElementById("galeria-imagens");
+  const pasta = galeria.getAttribute("data-pasta"); // Obtém o nome da pasta
 
-  // Adiciona o evento de clique no botão
+  obterFotos(pasta); // Passa o nome da pasta para a função
+
   const botaoCarregar = document.querySelector(".proxima-pagina");
   botaoCarregar.addEventListener("click", function () {
     // Quando o botão for clicado, carrega mais fotos
-    obterFotos();
+    obterFotos(pasta); // Passa o nome da pasta ao carregar mais fotos
   });
 });
