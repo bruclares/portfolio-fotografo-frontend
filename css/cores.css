@@ -9,6 +9,7 @@
   --color-other-2: #ff006e;
   --color-other-3: #8338ec;
   --color-other-4: #f9f9f9;
+  --color-other-5: #c42217;
 }
 
 .bg-primary {
@@ -58,4 +59,8 @@
 }
 .text-other-4 {
   color: var(--color-other-4);
+}
+
+.bg-projetos {
+  background-color: var(--color-other-5);
 }
