@@ -20,7 +20,7 @@ function obterFotos(pasta) {
   botao.textContent = "Carregando...";
 
   // Fazendo a requisição para o servidor
-  fetch("http://localhost:5000/api/cloudinary/fotos", {
+  fetch("https://portfolio-fotografo-backend.vercel.app/api/cloudinary/fotos", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
