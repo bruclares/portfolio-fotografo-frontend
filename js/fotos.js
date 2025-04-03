@@ -42,7 +42,7 @@ function obterFotos(pasta) {
 
         // Cria uma div para conter a imagem
         const divImagem = document.createElement("div");
-        divImagem.className = "foto-projeto";
+        divImagem.className = "card-imagem";
 
         // Cria o elemento de imagem
         const imagem = document.createElement("img");
@@ -88,7 +88,7 @@ function obterFotos(pasta) {
         mensagemErro.id = "mensagem-erro";
         mensagemErro.style.color = "red";
         mensagemErro.style.margin = "20px 0";
-        document.querySelector(".container-projetos").appendChild(mensagemErro);
+        document.querySelector(".pagina-conteudo").appendChild(mensagemErro);
       }
 
       // Exibe a mensagem de erro
