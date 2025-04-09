@@ -1,0 +1,92 @@
+.bg-sobre {
+  background-color: #b9ffff;
+}
+
+#sobre {
+  max-width: 1300px;
+  margin-inline: auto;
+  text-indent: 5rem;
+  text-align: right;
+  margin-bottom: 3rem;
+  font-weight: bold;
+}
+
+.sobre-titulo {
+  margin-block: 2rem;
+  letter-spacing: 5px;
+  color: var(--color-other-2);
+  font-size: 4rem;
+  /* font-weight: bold; */
+  line-height: 1.05;
+}
+
+#sobre p {
+  color: var(--color-other-2);
+  /* color: #0a5abd; */
+  font-size: 2rem;
+  line-height: 1.05;
+  letter-spacing: -0.1rem;
+  text-indent: 5rem;
+}
+
+.logo-sobre {
+  width: 100%;
+}
+
+.logo-sobre h1 {
+  width: 100%;
+  font-size: clamp(4rem, 20vw, 16rem);
+  padding-left: 3px;
+  text-align: left;
+  text-indent: 0;
+}
+
+@media (max-width: 768px) {
+  #sobre {
+    display: flex;
+    flex-wrap: wrap;
+    /* text-align: center; */
+    width: 95%;
+    height: 95%;
+  }
+  .sobre-titulo {
+    text-indent: normal;
+    text-align: right;
+  }
+}
+
+@media (max-width: 768px) {
+  #sobre {
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    height: 90%;
+  }
+
+  #sobre p {
+    font-size: 2rem;
+    text-indent: 2rem;
+    letter-spacing: normal;
+    font-weight: bold;
+    text-align: left;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  .sobre-titulo {
+    font-size: 2.75rem;
+    text-indent: 0rem;
+    letter-spacing: -0.1rem;
+    /* text-indent: 2rem; */
+    text-align: center;
+  }
+
+  .logo-sobre {
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, 100%) rotate(-90deg);
+  }
+
+  .logo-sobre h1 {
+    font-size: clamp(6rem, 8vw, 13vh);
+  }
+}
