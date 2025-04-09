@@ -11,8 +11,6 @@ toggleMenuButton.addEventListener("click", function () {
     toggleMenuButton.innerText == "Menu" ? "Fechar" : "Menu";
   document.body.classList.toggle("menu-open");
 
-  console.log(corPadrao);
-
   navbar.classList.toggle(corPadrao);
   navbar.classList.toggle("text-secondary");
 });
