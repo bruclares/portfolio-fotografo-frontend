@@ -1,3 +1,5 @@
+import getBackendURL from './utils.js';
+
 // Variável global para armazenar o cursor da próxima página
 let proximaPagina = null;
 
