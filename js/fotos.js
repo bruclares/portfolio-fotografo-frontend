@@ -43,16 +43,16 @@ function obterFotos(pasta) {
         todasFotos.push(foto);
 
         // Cria uma div para conter a imagem
-        const divImagem = document.createElement("div");
-        divImagem.className = "card-imagem";
+        const divImagem = document.createElement('div');
+        divImagem.className = 'card-imagem';
 
         // Cria o elemento de imagem
-        const imagem = document.createElement("img");
+        const imagem = document.createElement('img');
         imagem.src = foto.url;
         imagem.alt = foto.nome;
 
         // Adiciona evento de clique na imagem
-        divImagem.addEventListener("click", function () {
+        divImagem.addEventListener('click', function () {
           // Encontra o índice da foto no array de todas as fotos
           const index = todasFotos.findIndex((item) => item.url === foto.url);
           abrirLightbox(index);
