@@ -18,14 +18,14 @@ function obterFotos(pasta) {
   };
 
   // Exibir indicador de carregamento
-  const botao = document.querySelector(".proxima-pagina");
-  botao.textContent = "Carregando...";
+  const botao = document.querySelector('.proxima-pagina');
+  botao.textContent = 'Carregando...';
 
   // Fazendo a requisição para o servidor
-  fetch("https://portfolio-fotografo-backend.vercel.app/api/cloudinary/fotos", {
-    method: "POST",
+  fetch(`${getBackendURL()}/api/cloudinary/fotos`, {
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify(dados),
   })
