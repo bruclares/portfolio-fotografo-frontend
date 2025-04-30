@@ -105,26 +105,26 @@ function abrirLightbox(index) {
   fotoAtualIndex = index;
 
   // Cria o lightbox se ele não existir
-  if (!document.getElementById("lightbox")) {
+  if (!document.getElementById('lightbox')) {
     criarLightbox();
   }
 
   // Obtém o lightbox e o mostra
-  const lightbox = document.getElementById("lightbox");
-  lightbox.style.display = "flex";
+  const lightbox = document.getElementById('lightbox');
+  lightbox.style.display = 'flex';
 
   // Carrega a foto atual no lightbox
   atualizarFotoLightbox();
 
   // Desabilita o scroll da página
-  document.body.style.overflow = "hidden";
+  document.body.style.overflow = 'hidden';
 }
 
 // Função para criar o lightbox
 function criarLightbox() {
   // Cria o container do lightbox
-  const lightbox = document.createElement("div");
-  lightbox.id = "lightbox";
+  const lightbox = document.createElement('div');
+  lightbox.id = 'lightbox';
 
   // Adiciona o HTML interno do lightbox
   lightbox.innerHTML = `
