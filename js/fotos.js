@@ -35,7 +35,7 @@ function obterFotos(pasta) {
     })
     .then(function (dados) {
       // Obtém o elemento da galeria onde as fotos serão exibidas
-      const galeria = document.getElementById("galeria-imagens");
+      const galeria = document.getElementById('galeria-imagens');
 
       // Para cada foto retornada, cria os elementos HTML
       dados.fotos.forEach(function (foto) {
