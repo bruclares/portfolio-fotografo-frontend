@@ -69,33 +69,33 @@ function obterFotos(pasta) {
       proximaPagina = dados.proxima_pagina;
 
       // Restaura o texto do botão
-      botao.textContent = "Carregar mais";
+      botao.textContent = 'Carregar mais';
 
       // Se não houver mais fotos, esconde o botão
       if (!proximaPagina) {
-        botao.style.display = "none";
+        botao.style.display = 'none';
       }
     })
     .catch(function (erro) {
       // Em caso de erro, mostra no console
-      console.error("Erro ao carregar as fotos:", erro);
+      console.error('Erro ao carregar as fotos:', erro);
 
       // Restaura o texto do botão
-      const botao = document.querySelector(".proxima-pagina");
-      botao.textContent = "Carregar mais";
+      const botao = document.querySelector('.proxima-pagina');
+      botao.textContent = 'Carregar mais';
 
       // Cria um elemento para mostrar o erro (se não existir)
-      if (!document.getElementById("mensagem-erro")) {
-        const mensagemErro = document.createElement("div");
-        mensagemErro.id = "mensagem-erro";
-        mensagemErro.style.color = "red";
-        mensagemErro.style.margin = "20px 0";
-        document.querySelector(".pagina-conteudo").appendChild(mensagemErro);
+      if (!document.getElementById('mensagem-erro')) {
+        const mensagemErro = document.createElement('div');
+        mensagemErro.id = 'mensagem-erro';
+        mensagemErro.style.color = 'red';
+        mensagemErro.style.margin = '20px 0';
+        document.querySelector('.pagina-conteudo').appendChild(mensagemErro);
       }
 
       // Exibe a mensagem de erro
-      document.getElementById("mensagem-erro").textContent =
-        "Não foi possível carregar as fotos. Verifique se o servidor está rodando.";
+      document.getElementById('mensagem-erro').textContent =
+        'Não foi possível carregar as fotos. Verifique se o servidor está rodando.';
     });
 }
 
