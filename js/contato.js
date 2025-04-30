@@ -1,4 +1,4 @@
-import getBackendURL from './utils';
+import getBackendURL from './utils.js';
 
 const formulario = document.querySelector('#form-contato');
 
