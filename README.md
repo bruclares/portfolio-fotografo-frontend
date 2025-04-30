@@ -63,42 +63,43 @@ O front-end utiliza HTML, CSS e JavaScript puro, com integração ao Cloudinary 
     - Implementar filtros de fotos por metadados (se suportado pelo back-end).
     - Finalizar testes de acessibilidade (WCAG) e performance.
 
-- **Riscos Conhecidos**:
-  - Dependência do back-end; falhas na API podem afetar o formulário e a galeria.
-  - Compatibilidade limitada em navegadores antigos (ex.: Fetch API).
-
 ---
 
 ## Estrutura do Projeto
 
 ```
-portfolio-fotografo-frontend/
-├── colabs.html
-├── contato.html
-├── index.html
-├── projetos.html
-├── retratos.html
-├── sobre.html
-├── css/
-│   ├── reset.css
-│   ├── global.css
-│   ├── tipografia.css
-│   ├── cores.css
-│   ├── container.css
-│   ├── menu.css
-│   ├── pagina-inicial.css
-│   ├── contato.css
-│   ├── galeria.css
-│   ├── style.css
-├── js/
-│   ├── script.js
-│   ├── contato.js
-│   ├── fotos.js
-├── img/
-│   ├── logo.svg
-│   ├── favicon.svg
-├── .gitignore
-├── README.md
+portfolio-fotografo-frontend
+├─ colabs.html
+├─ contato.html
+├─ css
+│  ├─ container.css
+│  ├─ contato.css
+│  ├─ cores.css
+│  ├─ galeria.css
+│  ├─ global.css
+│  ├─ menu.css
+│  ├─ pagina-inicial.css
+│  ├─ reset.css
+│  ├─ sobre.css
+│  ├─ style.css
+│  └─ tipografia.css
+├─ img
+│  ├─ favicon.svg
+│  └─ logo
+│     ├─ logo-large.svg
+│     ├─ logo-md.svg
+│     └─ logo-small.svg
+├─ index.html
+├─ js
+│  ├─ contato.js
+│  ├─ fotos.js
+│  ├─ script.js
+│  └─ utils.js
+├─ projetos.html
+├─ README.md
+├─ retratos.html
+└─ sobre.html
+
 ```
 
 - **HTMLs na raiz**: Páginas específicas (`colabs.html`, `contato.html`, `index.html`, `projetos.html`, `retratos.html`, `sobre.html`) para diferentes seções do site.
