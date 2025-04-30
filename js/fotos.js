@@ -142,13 +142,13 @@ function criarLightbox() {
 
   // Fechar ao clicar no botão de fechar
   lightbox
-    .querySelector(".lightbox-fechar")
-    .addEventListener("click", function () {
+    .querySelector('.lightbox-fechar')
+    .addEventListener('click', function () {
       fecharLightbox();
     });
 
   // Fechar ao clicar fora da imagem
-  lightbox.addEventListener("click", function (e) {
+  lightbox.addEventListener('click', function (e) {
     if (e.target === lightbox) {
       fecharLightbox();
     }
@@ -156,32 +156,32 @@ function criarLightbox() {
 
   // Navegar para a foto anterior
   lightbox
-    .querySelector(".lightbox-anterior")
-    .addEventListener("click", function () {
+    .querySelector('.lightbox-anterior')
+    .addEventListener('click', function () {
       navegarLightbox(-1);
     });
 
   // Navegar para a próxima foto
   lightbox
-    .querySelector(".lightbox-proxima")
-    .addEventListener("click", function () {
+    .querySelector('.lightbox-proxima')
+    .addEventListener('click', function () {
       navegarLightbox(1);
     });
 
   // Adicionar eventos de teclado
-  document.addEventListener("keydown", function (e) {
+  document.addEventListener('keydown', function (e) {
     if (
-      !document.getElementById("lightbox") ||
-      document.getElementById("lightbox").style.display === "none"
+      !document.getElementById('lightbox') ||
+      document.getElementById('lightbox').style.display === 'none'
     ) {
       return;
     }
 
-    if (e.key === "Escape") {
+    if (e.key === 'Escape') {
       fecharLightbox();
-    } else if (e.key === "ArrowLeft") {
+    } else if (e.key === 'ArrowLeft') {
       navegarLightbox(-1);
-    } else if (e.key === "ArrowRight") {
+    } else if (e.key === 'ArrowRight') {
       navegarLightbox(1);
     }
   });
@@ -192,11 +192,11 @@ function criarLightbox() {
 
 // Função para fechar o lightbox
 function fecharLightbox() {
-  const lightbox = document.getElementById("lightbox");
-  lightbox.style.display = "none";
+  const lightbox = document.getElementById('lightbox');
+  lightbox.style.display = 'none';
 
   // Reabilita o scroll da página
-  document.body.style.overflow = "auto";
+  document.body.style.overflow = 'auto';
 }
 
 // Função para navegar entre as fotos
@@ -224,20 +224,20 @@ function atualizarFotoLightbox() {
   const foto = todasFotos[fotoAtualIndex];
 
   // Atualiza a imagem
-  const imagem = document.querySelector(".lightbox-imagem");
+  const imagem = document.querySelector('.lightbox-imagem');
   imagem.src = foto.url;
   imagem.alt = foto.nome;
 }
 
 // Quando a página for carregada
-document.addEventListener("DOMContentLoaded", function () {
-  const galeria = document.getElementById("galeria-imagens");
-  const pasta = galeria.getAttribute("data-pasta"); // Obtém o nome da pasta
+document.addEventListener('DOMContentLoaded', function () {
+  const galeria = document.getElementById('galeria-imagens');
+  const pasta = galeria.getAttribute('data-pasta'); // Obtém o nome da pasta
 
   obterFotos(pasta); // Passa o nome da pasta para a função
 
-  const botaoCarregar = document.querySelector(".proxima-pagina");
-  botaoCarregar.addEventListener("click", function () {
+  const botaoCarregar = document.querySelector('.proxima-pagina');
+  botaoCarregar.addEventListener('click', function () {
     // Quando o botão for clicado, carrega mais fotos
     obterFotos(pasta); // Passa o nome da pasta ao carregar mais fotos
   });
