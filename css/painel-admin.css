@@ -47,6 +47,7 @@ main {
   background-color: var(--color-other-4);
   width: 60%;
   justify-self: center;
+  margin-bottom: 1rem;
 }
 
 .titulo-container {
@@ -59,6 +60,7 @@ main {
   display: flex;
   justify-content: center;
   column-gap: 2rem;
+  margin-bottom: 10rem;
 }
 
 .card-cabecalho {
