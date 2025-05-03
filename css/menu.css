@@ -53,42 +53,38 @@
 }
 
 .menu-links li {
-  letter-spacing: 10px;
+  letter-spacing: 20px;
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
   width: fit-content;
   line-height: 0.8;
 }
 
+.menu-links li:nth-child(odd) {
+  margin-left: 3%;
+}
+
 .menu-links li:nth-child(even) {
+  margin-right: 3%;
   align-self: flex-end;
 }
 
+/* Destaque para itens ativos/hover */
 .menu-links li:hover,
 .menu-links li.ativo {
-  transform: scale(1.05);
+  transform: translateX(5px);
   color: var(--color-other-2);
 }
 
-/* Ajustes Individuais dos Itens do Menu */
-.item-sobre,
-.item-projetos {
-  margin-left: 5%;
-}
-
-.item-retratos {
-  padding-right: 5%;
-}
-
-.item-contato {
-  padding-right: 15%;
-}
-
-.item-colab {
-  margin-left: 15%;
+@media (max-width: 768px) {
+  .menu-links li:nth-child(odd),
+  .menu-links li:nth-child(even) {
+    margin: 1rem 0;
+    align-self: center;
+  }
 }
 
 /* Responsividade */
-@media (max-width: 1280px) {
+/* @media (max-width: 1280px) {
   .menu-links.show {
     row-gap: 10px;
   }
@@ -119,4 +115,4 @@
   .menu-links li:nth-child(even) {
     align-self: flex-start;
   }
-}
+} */

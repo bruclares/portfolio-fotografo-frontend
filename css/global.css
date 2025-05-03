@@ -31,3 +31,9 @@ body.menu-open {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
+footer p {
+  margin-top: 56px;
+  text-align: center;
+  color: var(--color-secondary);
+}

@@ -1,7 +1,7 @@
 /* Definições de Fontes e Tipografia */
 :root {
-  --font-primary: "Work Sans", sans-serif;
-  --font-secondary: "Unlock", sans-serif;
+  --font-primary: 'Work Sans', sans-serif;
+  --font-secondary: 'Unlock', sans-serif;
 }
 
 /* Fonte Work Sans - Tamanhos e Pesos */
