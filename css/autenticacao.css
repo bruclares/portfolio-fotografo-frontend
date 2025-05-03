@@ -1,0 +1,142 @@
+body.bg-autenticacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.header-autenticacao {
+  margin-bottom: 2rem;
+}
+
+.header-autenticacao .marca {
+  font-size: 2rem;
+  color: var(--color-primary);
+  justify-content: center;
+}
+
+.container-autenticacao {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.titulo-container {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.titulo-container h1,
+.titulo-container h2 {
+  width: 100%;
+  white-space: normal;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.titulo-container h1 {
+  margin-bottom: 1rem;
+}
+
+/* Cabeçalho do formulário */
+.form-autenticacao {
+  margin-top: 5rem;
+  margin-bottom: 20px;
+}
+
+/* Estrutura do formulário */
+.form-autenticacao {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilização dos itens do formulário */
+.form-autenticacao-item {
+  width: 100%;
+  align-items: flex-end;
+}
+
+.form-autenticacao-item .alert {
+  margin: 3rem 0 3rem 65px;
+}
+
+/* Inputs e textarea */
+.form-autenticacao-item input {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid var(--color-other-3);
+  background: var(--color-other-4);
+  color: var(--color-secondary);
+  outline: none;
+  border-radius: 8px;
+  line-height: 1.5;
+}
+
+/* Estilização ao focar nos inputs */
+.form-autenticacao-item input:focus {
+  border-color: var(--color-other-1);
+  transition: border-color 0.5s ease;
+}
+
+/* Botão do Formulário */
+.form-autenticacao-botao {
+  background-color: var(--color-primary);
+  color: var(--color-other-4);
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 8px;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.form-autenticacao-botao:hover {
+  background-color: var(--color-other-2);
+  transform: scale(1.01);
+}
+
+.autenticacao-esqueci-senha {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  transition: color 0.3s ease;
+}
+
+.autenticacao-esqueci-senha:hover {
+  color: var(--color-primary);
+}
+
+/* Alertas de Erro e Sucesso */
+.alert {
+  display: none;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+  font-family: var(--font-primary);
+  width: max-content;
+}
+
+.alert.show {
+  display: block;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}

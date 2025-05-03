@@ -1,0 +1,76 @@
+body.container {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  /* width: 100%; */
+  /* align-self: center; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  /* margin-inline: auto; */
+}
+
+.nav-admin {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 0;
+  line-height: 1.5;
+}
+
+.menu-admin {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 50px;
+}
+
+.menu-admin-item:hover {
+  color: var(--color-other-2);
+  transform: scale(1.01);
+}
+
+.card {
+  /* flex-basis: 30%; */
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 2px solid var(--color-other-3);
+  padding: 30px 30px;
+  /* position: relative; */
+  /* max-height: max-content; */
+  background-color: var(--color-other-4);
+  width: 60%;
+  justify-self: center;
+}
+
+.titulo-container {
+  text-align: center;
+}
+
+.paginacao {
+  margin-top: 1rem;
+  /* flex: 1; */
+  display: flex;
+  justify-content: center;
+  column-gap: 2rem;
+}
+
+.card-cabecalho {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.card-item {
+  line-height: 1.5;
+}
+
+.card-item h3 {
+  margin-top: 1rem;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurora Espinosa</title>
+
+  <meta name="description"
+    content="Portfólio de Aurora Espinosa, fotógrafa especializada em retratos e colaborações artísticas.">
+  <meta property="og:title" content="Aurora Espinosa | Fotografia e Arte">
+  <meta property="og:description"
+    content="Conheça o trabalho de Aurora Espinosa, fotógrafa que captura emoções e momentos únicos.">
+  <!-- <meta property="og:image" content="URL_DA_IMAGEM_DE_DESTAQUE"> -->
+  <!-- <meta property="og:url" content="https://site.com"> -->
+
+  <link rel="icon" href="../img/favicon.svg" type="image/svg+xml" sizes="64x64">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Unlock&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="bg-secondary container">
+  <header>
+    <nav role="navigation" class="nav-admin">
+      <a href="/" class="marca font-primary-md text-primary">
+        A<span>urora</span>&nbsp;—&nbsp;E<span>spinosa</span>
+      </a>
+      <ul class="menu-admin text-primary font-primary-md" aria-label="Menu administrativo">
+        <li class="menu-admin-item"><a href="../mensagens.html">Mensagens</a></li>
+        <li class="menu-admin-item"><a href="../formas-de-contato.html">Meus Dados</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <section class="container container-autenticacao"
+        aria-label="Formulário para alteração das formas de contato do fotográfo">
+        <div class="titulo-container">
+          <h1 class="form-autenticacao text-primary font-secondary-lg">Formas de contato</h1>
+        </div>
+
+        <section class="alert"></section>
+
+        <form action="/atualizar-forma-contato" method="PUT">
+
+          <div class="form-autenticacao-item">
+            <label class="text-primary font-secondary-md" for="instagram">Instagram:</label>
+            <input type="url" id="instagram" name="instagram" placeholder="https://instagram.com/seu perfil">
+          </div>
+
+          <div class="form-autenticacao-item">
+            <label class="text-primary font-secondary-md" for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="exemplo@email.com">
+          </div>
+
+          <div class="form-autenticacao-item">
+            <label class="text-primary font-secondary-md" for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(11) 98765-4321">
+          </div>
+
+          <button type="submit" class="form-autenticacao-botao font-secondary-md">Salvar</button>
+        </form>
+
+      </section>
+    </section>
+  </main>
+
+</body>
+
+</html>

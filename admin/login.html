@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurora Espinosa</title>
+
+  <meta name="description"
+    content="Portfólio de Aurora Espinosa, fotógrafa especializada em retratos e colaborações artísticas.">
+  <meta property="og:title" content="Aurora Espinosa | Fotografia e Arte">
+  <meta property="og:description"
+    content="Conheça o trabalho de Aurora Espinosa, fotógrafa que captura emoções e momentos únicos.">
+  <!-- <meta property="og:image" content="URL_DA_IMAGEM_DE_DESTAQUE"> -->
+  <!-- <meta property="og:url" content="https://site.com"> -->
+
+  <link rel="icon" href="../img/favicon.svg" type="image/svg+xml" sizes="64x64">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Unlock&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="bg-autenticacao bg-secondary">
+  <header class="header-autenticacao form-autenticacao">
+    <a href="/" class="marca font-primary-md">
+      A<span>urora</span>&nbsp;—&nbsp;E<span>spinosa</span>
+    </a>
+  </header>
+
+  <main>
+    <section class="container container-autenticacao" aria-label="Acesso para o painel administrativo">
+      <div class="titulo-container">
+        <h1 class="form-autenticacao text-primary font-secondary-lg">Login - painel admin</h1>
+      </div>
+
+
+      <section class="alert"></section>
+
+      <form id="form-autenticacao">
+        <div class="form-autenticacao-item">
+          <label for="email" class="visually-hidden">E-mail</label>
+          <input type="email" id="email" name="email" placeholder=" exemplo@email.com">
+        </div>
+
+        <div class="form-autenticacao-item">
+          <label for="senha" class="visually-hidden">Password</label>
+          <input type="password" id="senha" name="senha" placeholder="senha" minlength="2" maxlength="50">
+        </div>
+
+        <button type="submit" class="form-autenticacao-botao font-secondary-md">Login</button>
+
+        <a class="autenticacao-esqueci-senha text-other-4 font-secondary-md" href="./recuperar-senha.html">esqueci minha
+          senha</a>
+
+      </form>
+    </section>
+  </main>
+
+  <script type="module" src="../js/login.js"></script>
+
+</body>
+
+</html>
