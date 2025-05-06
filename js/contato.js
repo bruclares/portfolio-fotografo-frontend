@@ -46,3 +46,47 @@ formulario.addEventListener('submit', async function (event) {
     }
   }
 });
+
+function formatarTelefone(input) {
+  // Remove tudo que não é dígito e limita a 11 caracteres (DDD + 9 dígitos)
+  let valor = input.value.replace(/\D/g, '').substring(0, 11);
+
+  // Variável para o valor formatado
+  let valorFormatado = '';
+
+  // Aplica a formatação
+  if (valor.length > 0) {
+    valorFormatado = `(${valor.substring(0, 2)}`;
+  }
+  if (valor.length > 2) {
+    valorFormatado += `) ${valor.substring(2, 7)}`;
+  }
+  if (valor.length > 7) {
+    valorFormatado += `-${valor.substring(7)}`;
+  }
+
+  // Atualiza o campo
+  input.value = valorFormatado;
+}
+
+document.getElementById('telefone').addEventListener('input', function (e) {
+  // Salva a posição do cursor
+  const cursorPosition = e.target.selectionStart;
+
+  // Aplica a formatação
+  formatarTelefone(e.target);
+
+  // Restaura a posição do cursor, ajustando para caracteres não numéricos
+  let ajusteCursor = 0;
+  const valor = e.target.value;
+
+  // Conta quantos caracteres não numéricos existem antes da posição do cursor
+  for (let i = 0; i < cursorPosition + ajusteCursor && i < valor.length; i++) {
+    if (/\D/.test(valor[i])) ajusteCursor++;
+  }
+
+  e.target.setSelectionRange(
+    cursorPosition + ajusteCursor,
+    cursorPosition + ajusteCursor
+  );
+});

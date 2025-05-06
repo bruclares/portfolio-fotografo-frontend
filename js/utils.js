@@ -15,7 +15,7 @@ export function getHtmlMensagem(mensagem) {
         <article class="card">
           <header class="text-secondary font-primary-sm card-cabecalho">
             <h2>${mensagem.nome}</h2>
-            <span>${mensagem.data_envio}</span>
+            <span>${mensagem.data_formatada}</span>
           </header>
 
           <div class="text-secondary">

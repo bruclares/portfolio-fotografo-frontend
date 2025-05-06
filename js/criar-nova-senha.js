@@ -54,9 +54,5 @@ formularioNovaSenha.addEventListener('submit', async function (event) {
     if (!alerta.classList.contains('show')) {
       alerta.classList.add('show');
     }
-
-    setTimeout(() => {
-      window.location.href = 'recuperar-senha.html';
-    }, 3000);
   }
 });
