@@ -65,10 +65,13 @@
   font-weight: bold;
 }
 
-/* Media Queries para ajustes específicos (opcional) */
 @media (max-width: 768px) {
   .font-secondary-lg {
     letter-spacing: 0.2rem;
+  }
+
+  .font-primary-lg {
+    letter-spacing: normal;
   }
 }
 

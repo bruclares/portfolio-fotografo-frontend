@@ -78,19 +78,26 @@
 @media (max-width: 768px) {
   .menu-links li:nth-child(odd),
   .menu-links li:nth-child(even) {
-    margin: 1rem 0;
-    align-self: center;
+    margin-inline-start: 2rem;
+    align-self: flex-start;
+    margin-bottom: 1rem;
+  }
+  .menu-links li {
+    letter-spacing: 0.2rem;
   }
 }
 
 /* Responsividade */
-/* @media (max-width: 1280px) {
+@media (max-width: 1280px) {
   .menu-links.show {
-    row-gap: 10px;
+    row-gap: 3rem;
+  }
+  .menu-links li {
+    letter-spacing: 0.2rem;
   }
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .menu-links.show {
     row-gap: 35px;
   }

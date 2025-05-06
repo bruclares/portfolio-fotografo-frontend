@@ -54,15 +54,6 @@ main {
   text-align: center;
 }
 
-.paginacao {
-  margin-top: 1rem;
-  /* flex: 1; */
-  display: flex;
-  justify-content: center;
-  column-gap: 2rem;
-  margin-bottom: 10rem;
-}
-
 .card-cabecalho {
   display: flex;
   justify-content: space-between;
@@ -75,4 +66,44 @@ main {
 
 .card-item h3 {
   margin-top: 1rem;
+}
+
+.paginacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.paginacao button {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-primary);
+  background-color: transparent;
+  color: var(--color-primary);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s;
+  margin-bottom: 5rem;
+}
+
+.paginacao button:hover:not(:disabled) {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.paginacao button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#info-pagina {
+  margin: 0 1rem;
+  margin-bottom: 5rem;
+}
+
+#mensagens-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
