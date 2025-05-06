@@ -6,72 +6,45 @@ O **Portfólio para Fotógrafos** é uma aplicação web Full Stack desenvolvida
 
 O front-end utiliza HTML, CSS e JavaScript puro, com integração ao Cloudinary para carregar fotos dinamicamente e um formulário de contato para receber mensagens de clientes.
 
-**Status do Projeto**: Este projeto está em desenvolvimento ativo. Algumas funcionalidades, como o formulário de contato e a galeria com lightbox, estão implementadas, mas outras (como login e carrossel) estão pendentes.
-
 ---
 
-## Funcionalidades
+## Funcionalidades do Frontend
 
-### Front-end
-
-- **Página Inicial**: Base para navegação com menu full-screen e apresentação visual (em desenvolvimento).
-- **Galeria de Fotos**: Exibição dinâmica de fotos do Cloudinary, com paginação e lightbox interativo.
-- **Formulário de Contato**: Permite que visitantes enviem mensagens ao fotógrafo, com feedback visual.
-- **Design Responsivo**: Layout adaptável para desktop, tablet e mobile, usando media queries.
-
-### Back-end (Relacionado)
-
-- **API**: Desenvolvida em Flask, gerencia requisições como envio de contatos e recuperação de fotos do Cloudinary.
-- **Integração**: Conecta o front-end ao Cloudinary para carregamento de imagens.
-
-### Banco de Dados (Relacionado)
-
-- **Armazenamento**: PostgreSQL guarda mensagens de contato e logs (gerenciado pelo back-end).
+- Galeria de fotos dinâmica, integrando com o **Cloudinary**
+- Login de fotógrafa com autenticação via JWT
+- Recuperação de senha ("Esqueci minha senha")
+- Área administrativa:
+  - Edição das informações de contato
+  - Visualização das mensagens enviadas por visitantes
+- Formulário de contato com envio e persistência de dados
 
 ---
 
 ## Tecnologias Utilizadas
 
-- **Front-end**: HTML5, CSS3 (Flexbox, Grid, variáveis CSS), JavaScript (ES6+)
-- **Estilização**: CSS Modules (arquivos separados), Google Fonts ("Work Sans", "Unlock")
-- **Integração**: Fetch API para comunicação com o back-end
-- **Hospedagem**: Vercel
-- **Ferramentas**: Git, GitHub, VS Code
+- **HTML5** e **CSS3** (com responsividade manual)
+- **JavaScript ES6**
+- **Fetch API** para integração com o backend
+- **Cloudinary** para hospedagem e exibição de imagens
+- **LocalStorage** para controle de sessão (token JWT)
+- Integração com API REST em **Flask**
 
 ---
 
-## Status de Desenvolvimento
-
-- **Etapas Concluídas**:
-
-  - Estrutura inicial HTML e CSS, com formulário de contato funcional (AC1).
-  - Galeria de fotos com paginação e lightbox, integrada ao Cloudinary (parcialmente AC2).
-  - Menu full-screen com animações para navegação (AC1).
-  - Design responsivo básico com tipografia e cores definidas (AC1).
-
-- **Próximas Etapas**:
-
-  - **AC2 (06/04)**:
-    - Finalizar páginas específicas (Projetos, Retratos, Colabs) com integração à galeria existente.
-    - Garantir que cada página exiba fotos de pastas específicas do Cloudinary (ex.: "projetos", "retratos").
-  - **AC3 (04/05)**:
-    - Implementar página de login para o fotógrafo com opção "esqueci minha senha".
-    - Criar formulário de gerenciamento de dados do fotógrafo (nome, email, telefone, biografia, rede social).
-    - Otimizar responsividade com testes em mais dispositivos.
-  - **Entrega Final (08/06)**:
-    - Adicionar carrossel de imagens na página inicial, consumindo fotos do Cloudinary.
-    - Implementar filtros de fotos por metadados (se suportado pelo back-end).
-    - Finalizar testes de acessibilidade (WCAG) e performance.
-
----
-
-## Estrutura do Projeto
+## Estrutura de Pastas
 
 ```
 portfolio-fotografo-frontend
+├─ admin
+│  ├─ criar-nova-senha.html
+│  ├─ formas-de-contato.html
+│  ├─ login.html
+│  ├─ mensagens.html
+│  └─ recuperar-senha.html
 ├─ colabs.html
 ├─ contato.html
 ├─ css
+│  ├─ autenticacao.css
 │  ├─ container.css
 │  ├─ contato.css
 │  ├─ cores.css
@@ -79,6 +52,7 @@ portfolio-fotografo-frontend
 │  ├─ global.css
 │  ├─ menu.css
 │  ├─ pagina-inicial.css
+│  ├─ painel-admin.css
 │  ├─ reset.css
 │  ├─ sobre.css
 │  ├─ style.css
@@ -92,7 +66,11 @@ portfolio-fotografo-frontend
 ├─ index.html
 ├─ js
 │  ├─ contato.js
+│  ├─ criar-nova-senha.js
 │  ├─ fotos.js
+│  ├─ login.js
+│  ├─ mensagens.js
+│  ├─ recuperar-senha.js
 │  ├─ script.js
 │  └─ utils.js
 ├─ projetos.html
@@ -102,36 +80,35 @@ portfolio-fotografo-frontend
 
 ```
 
-- **HTMLs na raiz**: Páginas específicas (`colabs.html`, `contato.html`, `index.html`, `projetos.html`, `retratos.html`, `sobre.html`) para diferentes seções do site.
-- **`css/`**: Estilos modulares, incluindo `style.css` como arquivo adicional.
-- **`js/`**: Scripts separados para interatividade geral (`script.js`), formulário (`contato.js`) e galeria (`fotos.js`).
-- **`img/`**: Recursos visuais como logotipo (`logo.svg`) e favicon (`favicon.svg`).
+---
+
+## Autenticação
+
+A autenticação é feita com **JWT**, fornecido pela API Flask após o login. O token é armazenado no `localStorage` e incluído nas requisições subsequentes para acessar áreas protegidas do sistema (como o painel administrativo).
 
 ---
 
-## Como Executar Localmente
+## Como Rodar o Projeto
 
-1. **Clone o repositório**:
+### 1. Clone o repositório
 
-   ```bash
-   git clone https://github.com/bruclares/portfolio-fotografo-frontend.git
-   cd portfolio-fotografo-frontend
-   ```
+```bash
+git clone https://github.com/bruclares/portfolio-fotografo-frontend.git
 
-2. **Pré-requisitos**:
+cd portfolio-fotografo-frontend
+```
 
-   - Certifique-se de que o back-end está rodando em `https://portfolio-fotografo-backend.vercel.app` ou localmente (ajuste as URLs nos arquivos JavaScript se necessário).
+### 2. Abra o projeto no navegador
 
-3. **Execute o projeto**:
+Você pode abrir o arquivo index.html diretamente, ou usar uma extensão como Live Server (VSCode) para simular um ambiente local. Lembre-se de que as funcionalidades que consomem API precisam do backend Flask rodando.
 
-   - Abra qualquer arquivo HTML (ex.: `index.html`) em um navegador moderno (Chrome, Firefox, Edge) ou use um servidor local:
-     ```bash
-     # Exemplo com Live Server no VS Code
-     code . && live-server
-     ```
+### 3. **Execute o projeto**:
 
-4. **Teste a integração**:
-   - Verifique o envio do formulário em `contato.html` e o carregamento da galeria em `projetos.html`, `retratos.html` ou `colabs.html`.
+Abra qualquer arquivo HTML (ex.: `index.html`) em um navegador moderno (Chrome, Firefox, Edge) ou use um servidor local.
+
+### 4. **Teste a integração**:
+
+Verifique o envio do formulário em `contato.html` e o carregamento da galeria em `projetos.html`, `retratos.html` ou `colabs.html`.
 
 ---
 
@@ -141,14 +118,5 @@ portfolio-fotografo-frontend
 - **Repositório Front-end**: [portfolio-fotografo-frontend](https://github.com/bruclares/portfolio-fotografo-frontend)
 - **Repositório Back-end**: [portfolio-fotografo-backend](https://github.com/bruclares/portfolio-fotografo-backend)
 - **Hospedagem na Vercel**: [Portfólio Fotógrafo](https://portfolio-fotografo.vercel.app/)
-- **Design no Canva**: [Link do Design](https://www.canva.com/design/DAGdA_GiiT4/Cwp1Fd92u-JSd0oN7unAgg/view?utm_content=DAGdA_GiiT4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0d9a7d5038)
-- **Vídeo de Apresentação**: [Link do Vídeo](https://www.youtube.com/watch?v=LxZCA7SuQ8Y)
 
 ---
-
-## Diferenciais do Projeto
-
-1. **Integração com Cloudinary**: Carregamento dinâmico de fotos via API externa.
-2. **Design Responsivo**: Experiência adaptável a diferentes dispositivos.
-3. **Interatividade**: Lightbox e menu full-screen para uma navegação moderna.
-4. **Boas Práticas**: Commits semânticos, modularidade CSS e versionamento no GitHub.
