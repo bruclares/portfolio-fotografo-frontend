@@ -65,8 +65,10 @@ portfolio-fotografo-frontend
 │     └─ logo-small.svg
 ├─ index.html
 ├─ js
+│  ├─ api.js
 │  ├─ contato.js
 │  ├─ criar-nova-senha.js
+│  ├─ formas-de-contato.js
 │  ├─ fotos.js
 │  ├─ login.js
 │  ├─ mensagens.js
