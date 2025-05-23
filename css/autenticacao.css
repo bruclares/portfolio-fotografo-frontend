@@ -1,3 +1,6 @@
+/* ==================== */
+/* ESTRUTURA PRINCIPAL */
+/* ==================== */
 body.bg-autenticacao {
   display: flex;
   flex-direction: column;
@@ -24,6 +27,9 @@ body.bg-autenticacao {
   padding: 0 20px;
 }
 
+/* ==================== */
+/* TÍTULOS */
+/* ==================== */
 .titulo-container {
   width: 100%;
   margin-bottom: 2rem;
@@ -41,29 +47,20 @@ body.bg-autenticacao {
   margin-bottom: 1rem;
 }
 
-/* Cabeçalho do formulário */
+/* ==================== */
+/* FORMULÁRIO */
+/* ==================== */
 .form-autenticacao {
-  margin-top: 5rem;
-  margin-bottom: 20px;
-}
-
-/* Estrutura do formulário */
-.form-autenticacao {
+  margin: 5rem 0 20px;
   display: flex;
   flex-direction: column;
 }
 
-/* Estilização dos itens do formulário */
 .form-autenticacao-item {
   width: 100%;
   align-items: flex-end;
 }
 
-.form-autenticacao-item .alert {
-  margin: 3rem 0 3rem 65px;
-}
-
-/* Inputs e textarea */
 .form-autenticacao-item input {
   font-family: var(--font-primary);
   font-size: 1.2rem;
@@ -78,25 +75,25 @@ body.bg-autenticacao {
   line-height: 1.5;
 }
 
-/* Estilização ao focar nos inputs */
 .form-autenticacao-item input:focus {
   border-color: var(--color-other-1);
   transition: border-color 0.5s ease;
 }
 
-/* Botão do Formulário */
+/* ==================== */
+/* BOTÕES E LINKS */
+/* ==================== */
 .form-autenticacao-botao {
   background-color: var(--color-primary);
   color: var(--color-other-4);
   border: none;
-  padding: 12px 24px;
+  padding: 10px;
+  margin: 10px 0;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   border-radius: 8px;
   font-weight: bold;
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
 }
 
 .form-autenticacao-botao:hover {
@@ -115,7 +112,9 @@ body.bg-autenticacao {
   color: var(--color-primary);
 }
 
-/* Alertas de Erro e Sucesso */
+/* ==================== */
+/* ALERTAS */
+/* ==================== */
 .alert {
   display: none;
   padding: 1rem;
@@ -139,4 +138,11 @@ body.bg-autenticacao {
   background-color: #d4edda;
   color: #155724;
   border: 1px solid #c3e6cb;
+}
+
+/* ==================== */
+/* ITENS ESPECÍFICOS */
+/* ==================== */
+.form-autenticacao-item .alert {
+  margin: 3rem 0 3rem 65px;
 }

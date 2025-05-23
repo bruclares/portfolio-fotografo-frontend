@@ -1,3 +1,6 @@
+/* ==================== */
+/* ESTILOS BASE */
+/* ==================== */
 * {
   box-sizing: border-box;
 }
@@ -6,6 +9,9 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ==================== */
+/* ESTILOS DO CORPO */
+/* ==================== */
 body {
   display: flex;
   flex-direction: column;
@@ -21,6 +27,9 @@ body.menu-open {
   overflow: hidden;
 }
 
+/* ==================== */
+/* CLASSES UTILITÁRIAS */
+/* ==================== */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -32,6 +41,9 @@ body.menu-open {
   border: 0;
 }
 
+/* ==================== */
+/* ESTILOS DO RODAPÉ */
+/* ==================== */
 footer p {
   margin-top: 56px;
   text-align: center;

@@ -1,4 +1,6 @@
-/* Estilos para a Barra de Navegação */
+/* ==================== */
+/* BARRA DE NAVEGAÇÃO */
+/* ==================== */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -7,7 +9,9 @@
   padding-top: 0.5rem;
 }
 
-/* Estilos para a Marca/Logo */
+/* ==================== */
+/* MARCA/LOGO */
+/* ==================== */
 .marca {
   display: inline-flex;
   white-space: nowrap;
@@ -25,7 +29,9 @@
   max-width: 100%;
 }
 
-/* Botão para Alternar Menu */
+/* ==================== */
+/* BOTÃO TOGGLE MENU */
+/* ==================== */
 .toggle-menu {
   text-transform: capitalize;
   background-color: transparent;
@@ -33,7 +39,9 @@
   cursor: pointer;
 }
 
-/* Estilos para os Links do Menu */
+/* ==================== */
+/* LINKS DO MENU */
+/* ==================== */
 .menu-links {
   display: none;
   position: fixed;
@@ -68,11 +76,24 @@
   align-self: flex-end;
 }
 
-/* Destaque para itens ativos/hover */
+/* Estados hover/ativo */
 .menu-links li:hover,
 .menu-links li.ativo {
   transform: translateX(5px);
   color: var(--color-other-2);
+}
+
+/* ==================== */
+/* RESPONSIVIDADE */
+/* ==================== */
+@media (max-width: 1280px) {
+  .menu-links.show {
+    row-gap: 3rem;
+  }
+
+  .menu-links li {
+    letter-spacing: 0.2rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -82,44 +103,8 @@
     align-self: flex-start;
     margin-bottom: 1rem;
   }
+
   .menu-links li {
     letter-spacing: 0.2rem;
   }
 }
-
-/* Responsividade */
-@media (max-width: 1280px) {
-  .menu-links.show {
-    row-gap: 3rem;
-  }
-  .menu-links li {
-    letter-spacing: 0.2rem;
-  }
-}
-
-/* @media (max-width: 768px) {
-  .menu-links.show {
-    row-gap: 35px;
-  }
-}
-
-@media (max-width: 600px) {
-  .menu-links.show {
-    padding-left: 15px;
-  }
-
-  .item-sobre,
-  .item-projetos,
-  .item-colab {
-    margin-left: 0;
-  }
-
-  .item-retratos,
-  .item-contato {
-    padding-right: 0;
-  }
-
-  .menu-links li:nth-child(even) {
-    align-self: flex-start;
-  }
-} */

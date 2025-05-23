@@ -1,66 +1,74 @@
+/* ==================== */
+/* VARIÁVEIS DE CORES */
+/* ==================== */
 :root {
-  --color-primary: #f428f9;
-
-  --color-secondary: #2e2e4d;
-
-  --color-highlight: #ff9f1c;
-
-  --color-other-1: #3a86ff;
-  --color-other-2: #ff006e;
-  --color-other-3: #8338ec;
-  --color-other-4: #f9f9f9;
-  --color-other-5: #c42217;
+  --color-primary: #f428f9; /* Cor primária (rosa vibrante) */
+  --color-secondary: #2e2e4d; /* Cor secundária (azul escuro) */
+  --color-highlight: #ff9f1c; /* Cor de destaque (laranja) */
+  --color-other-1: #3a86ff; /* Azul claro */
+  --color-other-2: #ff006e; /* Rosa intenso */
+  --color-other-3: #8338ec; /* Roxo */
+  --color-other-4: #f9f9f9; /* Branco suave */
+  --color-other-5: #c42217; /* Vermelho escuro */
 }
 
+/* ==================== */
+/* CLASSES UTILITÁRIAS DE COR */
+/* ==================== */
+/* Cor Primária */
 .bg-primary {
   background-color: var(--color-primary);
-}
+} /* Fundo cor primária */
 .text-primary {
   color: var(--color-primary);
-}
+} /* Texto cor primária */
 
+/* Cor Secundária */
 .bg-secondary {
   background-color: var(--color-secondary);
-}
+} /* Fundo cor secundária */
 .text-secondary {
   color: var(--color-secondary);
-}
+} /* Texto cor secundária */
 
+/* Cor de Destaque */
 .bg-highlight {
   background-color: var(--color-highlight);
-}
+} /* Fundo cor destaque */
 .text-highlight {
   color: var(--color-highlight);
-}
+} /* Texto cor destaque */
 
+/* Outras Cores */
 .bg-other-1 {
   background-color: var(--color-other-1);
-}
+} /* Fundo azul claro */
 .text-other-1 {
   color: var(--color-other-1);
-}
+} /* Texto azul claro */
 
 .bg-other-2 {
   background-color: var(--color-other-2);
-}
+} /* Fundo rosa intenso */
 .text-other-2 {
   color: var(--color-other-2);
-}
+} /* Texto rosa intenso */
 
 .bg-other-3 {
   background-color: var(--color-other-3);
-}
+} /* Fundo roxo */
 .text-other-3 {
   color: var(--color-other-3);
-}
+} /* Texto roxo */
 
 .bg-other-4 {
   background-color: var(--color-other-4);
-}
+} /* Fundo branco suave */
 .text-other-4 {
   color: var(--color-other-4);
-}
+} /* Texto branco suave */
 
+/* Cor Especial para Projetos */
 .bg-projetos {
   background-color: var(--color-other-5);
-}
+} /* Fundo vermelho para projetos */

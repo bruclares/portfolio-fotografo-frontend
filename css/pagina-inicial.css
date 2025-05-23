@@ -1,4 +1,6 @@
-/* Estilos para o Contêiner do Logo */
+/* ==================== */
+/* CONTAINER DO LOGO */
+/* ==================== */
 .container-logo {
   flex: 1;
   position: relative;
@@ -11,7 +13,9 @@
   margin-inline: auto;
 }
 
-/* Estilos para o Logo */
+/* ==================== */
+/* ESTILOS DO LOGO */
+/* ==================== */
 .logo {
   width: min-content;
 }
@@ -21,7 +25,9 @@
   padding-left: 3px;
 }
 
-/* Resposnividade para o Logo */
+/* ==================== */
+/* RESPONSIVIDADE */
+/* ==================== */
 @media (max-width: 600px) {
   .logo {
     position: absolute;
