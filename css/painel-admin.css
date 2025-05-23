@@ -1,3 +1,6 @@
+/* ==================== */
+/* ESTRUTURA PRINCIPAL */
+/* ==================== */
 body.container {
   display: flex;
   flex-direction: column;
@@ -5,15 +8,14 @@ body.container {
 
 main {
   flex: 1;
-  /* width: 100%; */
-  /* align-self: center; */
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: center;
-  /* margin-inline: auto; */
 }
 
+/* ==================== */
+/* NAVEGAÇÃO ADMIN */
+/* ==================== */
 .nav-admin {
   display: flex;
   flex-wrap: wrap;
@@ -35,15 +37,15 @@ main {
   transform: scale(1.01);
 }
 
+/* ==================== */
+/* CARDS */
+/* ==================== */
 .card {
-  /* flex-basis: 30%; */
   display: flex;
   flex-direction: column;
   border-radius: 8px;
   border: 2px solid var(--color-other-3);
-  padding: 30px 30px;
-  /* position: relative; */
-  /* max-height: max-content; */
+  padding: 30px;
   background-color: var(--color-other-4);
   width: 60%;
   justify-self: center;
@@ -68,6 +70,9 @@ main {
   margin-top: 1rem;
 }
 
+/* ==================== */
+/* PAGINAÇÃO */
+/* ==================== */
 .paginacao {
   display: flex;
   justify-content: center;
@@ -98,10 +103,12 @@ main {
 }
 
 #info-pagina {
-  margin: 0 1rem;
-  margin-bottom: 5rem;
+  margin: 0 1rem 5rem;
 }
 
+/* ==================== */
+/* MENSAGENS */
+/* ==================== */
 #mensagens-container {
   display: flex;
   flex-direction: column;

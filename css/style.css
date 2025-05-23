@@ -1,16 +1,24 @@
-/* Reset e estilos base */
+/* ==================== */
+/* RESET E ESTILOS BASE */
+/* ==================== */
 @import './reset.css';
 @import './global.css';
 
-/* Utilitários e design tokens */
-@import './tipografia.css';
+/* ==================== */
+/* DESIGN TOKENS */
+/* ==================== */
 @import './cores.css';
+@import './tipografia.css';
 
-/* Layout e componentes */
+/* ==================== */
+/* COMPONENTES */
+/* ==================== */
 @import './container.css';
 @import './menu.css';
 
-/* Estilos específicos de página */
+/* ==================== */
+/* PÁGINAS */
+/* ==================== */
 @import './pagina-inicial.css';
 @import './contato.css';
 @import './galeria.css';

@@ -1,7 +1,13 @@
+/* ==================== */
+/* BACKGROUND */
+/* ==================== */
 .bg-sobre {
   background-color: #b9ffff;
 }
 
+/* ==================== */
+/* SEÇÃO SOBRE */
+/* ==================== */
 #sobre {
   max-width: 1300px;
   margin-inline: auto;
@@ -11,24 +17,28 @@
   font-weight: bold;
 }
 
-.sobre-titulo {
-  margin-block: 2rem;
-  letter-spacing: 5px;
-  color: var(--color-other-2);
-  font-size: 4rem;
-  /* font-weight: bold; */
-  line-height: 1.05;
-}
-
 #sobre p {
   color: var(--color-other-2);
-  /* color: #0a5abd; */
   font-size: 2rem;
   line-height: 1.05;
   letter-spacing: -0.1rem;
   text-indent: 5rem;
 }
 
+/* ==================== */
+/* TÍTULO */
+/* ==================== */
+.sobre-titulo {
+  margin-block: 2rem;
+  letter-spacing: 5px;
+  color: var(--color-other-2);
+  font-size: 4rem;
+  line-height: 1.05;
+}
+
+/* ==================== */
+/* LOGO */
+/* ==================== */
 .logo-sobre {
   width: 100%;
 }
@@ -41,20 +51,9 @@
   text-indent: 0;
 }
 
-@media (max-width: 768px) {
-  #sobre {
-    display: flex;
-    flex-wrap: wrap;
-    /* text-align: center; */
-    width: 95%;
-    height: 95%;
-  }
-  .sobre-titulo {
-    text-indent: normal;
-    text-align: right;
-  }
-}
-
+/* ==================== */
+/* RESPONSIVIDADE */
+/* ==================== */
 @media (max-width: 768px) {
   #sobre {
     display: flex;
@@ -72,11 +71,11 @@
     line-height: 1;
     margin-bottom: 1rem;
   }
+
   .sobre-titulo {
     font-size: 2.75rem;
-    text-indent: 0rem;
+    text-indent: 0;
     letter-spacing: -0.1rem;
-    /* text-indent: 2rem; */
     text-align: center;
   }
 
