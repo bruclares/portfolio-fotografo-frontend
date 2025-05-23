@@ -22,7 +22,7 @@ export function getHtmlMensagem(mensagem) {
             <div class="card-item">
               <span class="font-primary-sm">Telefone:</span>
               <a href="tel:+5511999999999">${
-                mensagem.telefone || 'Não informado'
+                formatarTelefone(mensagem.telefone) || 'Não informado'
               }</a>
             </div>
             <div class="card-item">
@@ -40,4 +40,27 @@ export function getHtmlMensagem(mensagem) {
       </div>`;
 
   return htmlMensagem;
+}
+
+export function formatarTelefone(telefone) {
+  // Remove tudo que não é dígito e limita a 11 caracteres (DDD + 9 dígitos)
+  let valor = telefone.replace(/\D/g, '').substring(0, 11);
+
+  // Variável para o valor formatado
+  let valorFormatado = '';
+
+  // Aplica a formatação
+  if (valor.length > 0) {
+    valorFormatado = `(${valor.substring(0, 2)}`;
+  }
+  if (valor.length > 2) {
+    valorFormatado += `) ${valor.substring(2, 7)}`;
+  }
+  if (valor.length > 7) {
+    valorFormatado += `-${valor.substring(7)}`;
+  }
+
+  // Atualiza o campo
+  telefone = valorFormatado;
+  return telefone;
 }

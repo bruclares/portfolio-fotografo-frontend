@@ -1,4 +1,34 @@
-import getBackendURL from './utils.js';
+import getBackendURL, { formatarTelefone } from './utils.js';
+
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    let resposta = await fetch(`${getBackendURL()}/api/formas-contato`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    console.log(resposta);
+
+    resposta = await resposta.json();
+
+    const redeSocial = document.getElementById('redesocial');
+    let redeSocialPerfil = resposta.redesocial_perfil.slice(
+      resposta.redesocial_perfil.lastIndexOf('/') + 1
+    );
+
+    if (!redeSocialPerfil.includes('@')) {
+      redeSocialPerfil = '@' + redeSocialPerfil;
+    }
+
+    console.log(redeSocialPerfil);
+
+    redeSocial.innerHTML = `${resposta.redesocial_nome}:<br>${redeSocialPerfil}`;
+    redeSocial.href = resposta.redesocial_perfil;
+  } catch {
+    console.log('erro ao buscar trololo');
+  }
+});
 
 const formulario = document.querySelector('#form-contato');
 
@@ -47,34 +77,12 @@ formulario.addEventListener('submit', async function (event) {
   }
 });
 
-function formatarTelefone(input) {
-  // Remove tudo que não é dígito e limita a 11 caracteres (DDD + 9 dígitos)
-  let valor = input.value.replace(/\D/g, '').substring(0, 11);
-
-  // Variável para o valor formatado
-  let valorFormatado = '';
-
-  // Aplica a formatação
-  if (valor.length > 0) {
-    valorFormatado = `(${valor.substring(0, 2)}`;
-  }
-  if (valor.length > 2) {
-    valorFormatado += `) ${valor.substring(2, 7)}`;
-  }
-  if (valor.length > 7) {
-    valorFormatado += `-${valor.substring(7)}`;
-  }
-
-  // Atualiza o campo
-  input.value = valorFormatado;
-}
-
 document.getElementById('telefone').addEventListener('input', function (e) {
   // Salva a posição do cursor
   const cursorPosition = e.target.selectionStart;
 
   // Aplica a formatação
-  formatarTelefone(e.target);
+  e.target.value = formatarTelefone(e.target.value);
 
   // Restaura a posição do cursor, ajustando para caracteres não numéricos
   let ajusteCursor = 0;
