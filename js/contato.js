@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         'Content-Type': 'application/json',
       },
     });
-    console.log(resposta);
 
     resposta = await resposta.json();
 
@@ -21,12 +20,17 @@ document.addEventListener('DOMContentLoaded', async () => {
       redeSocialPerfil = '@' + redeSocialPerfil;
     }
 
-    console.log(redeSocialPerfil);
+    const email = document.getElementById('email');
+    const telefone = document.getElementById('contato-telefone');
+    const telefoneFormatado = formatarTelefone(resposta.telefone);
 
     redeSocial.innerHTML = `${resposta.redesocial_nome}:<br>${redeSocialPerfil}`;
     redeSocial.href = resposta.redesocial_perfil;
+
+    email.innerHTML = `email:<br>${resposta.email}`;
+    telefone.innerHTML = `telefone:<br>${telefoneFormatado}`;
   } catch {
-    console.log('erro ao buscar trololo');
+    console.log('Erro ao buscar os contatos');
   }
 });
 
@@ -78,23 +82,5 @@ formulario.addEventListener('submit', async function (event) {
 });
 
 document.getElementById('telefone').addEventListener('input', function (e) {
-  // Salva a posição do cursor
-  const cursorPosition = e.target.selectionStart;
-
-  // Aplica a formatação
   e.target.value = formatarTelefone(e.target.value);
-
-  // Restaura a posição do cursor, ajustando para caracteres não numéricos
-  let ajusteCursor = 0;
-  const valor = e.target.value;
-
-  // Conta quantos caracteres não numéricos existem antes da posição do cursor
-  for (let i = 0; i < cursorPosition + ajusteCursor && i < valor.length; i++) {
-    if (/\D/.test(valor[i])) ajusteCursor++;
-  }
-
-  e.target.setSelectionRange(
-    cursorPosition + ajusteCursor,
-    cursorPosition + ajusteCursor
-  );
 });
