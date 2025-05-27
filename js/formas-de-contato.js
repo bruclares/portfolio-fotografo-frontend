@@ -4,10 +4,11 @@ let id = null;
 
 document.addEventListener('DOMContentLoaded', async () => {
   try {
-    let resposta = await fetch(`${getBackendURL()}/api/formas-contato`, {
+    let resposta = await fetch(`${getBackendURL()}/api/formas-contato/admin`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
       },
     });
 
