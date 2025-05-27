@@ -65,7 +65,9 @@ portfolio-fotografo-frontend
 │     └─ logo-small.svg
 ├─ index.html
 ├─ js
+│  ├─ admin.-init.js
 │  ├─ api.js
+│  ├─ auth-manager.js
 │  ├─ contato.js
 │  ├─ criar-nova-senha.js
 │  ├─ formas-de-contato.js
@@ -74,6 +76,7 @@ portfolio-fotografo-frontend
 │  ├─ mensagens.js
 │  ├─ recuperar-senha.js
 │  ├─ script.js
+│  ├─ sobre.js
 │  └─ utils.js
 ├─ projetos.html
 ├─ README.md
