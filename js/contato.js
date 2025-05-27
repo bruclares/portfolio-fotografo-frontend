@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       resposta.redesocial_perfil.lastIndexOf('/') + 1
     );
 
+    console.log(resposta);
+
     if (!redeSocialPerfil.includes('@')) {
       redeSocialPerfil = '@' + redeSocialPerfil;
     }
