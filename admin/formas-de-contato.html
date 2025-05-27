@@ -14,6 +14,11 @@
   <!-- <meta property="og:image" content="URL_DA_IMAGEM_DE_DESTAQUE"> -->
   <!-- <meta property="og:url" content="https://site.com"> -->
 
+  <script type="module">
+    import { verificarAutenticacao } from '../js/auth-manager.js';
+    verificarAutenticacao();
+  </script>
+
   <link rel="icon" href="../img/favicon.svg" type="image/svg+xml" sizes="64x64">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,6 +39,7 @@
         <li class="menu-admin-item"><a href="./mensagens.html">Mensagens</a></li>
         <li class="menu-admin-item"><a href="./formas-de-contato.html">Meus Dados</a></li>
       </ul>
+      <button data-action="logout" id="logout-button" class="text-primary font-primary-md">Sair</button>
     </nav>
   </header>
 
@@ -75,6 +81,7 @@
       </section>
     </section>
   </main>
+  <script type="module" src="../js/auth-manager.js"></script>
   <script type="module" src="../js/formas-de-contato.js"></script>
 
 </body>
