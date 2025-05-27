@@ -15,9 +15,6 @@ class AuthManager {
 
   async logout() {
     try {
-      // mostra loading
-      this.showLoading('Fazendo logout...');
-
       const token = this.getToken();
 
       if (token) {
@@ -65,9 +62,6 @@ class AuthManager {
    * Redireciona para página de login
    */
   redirecionarParaLogin() {
-    // Remove loading
-    this.hideLoading();
-
     // Pequeno delay para melhor UX
     setTimeout(() => {
       window.location.href = '/admin/login.html';
@@ -78,28 +72,6 @@ class AuthManager {
    */
   getToken() {
     return localStorage.getItem(this.tokenKey);
-  }
-
-  /**
-   * Mostar indicador de loading
-   */
-  showLoading(message) {
-    // implementar loading spinner/message
-    const loadingDiv = document.createElement('div');
-    loadingDiv.id = 'logout-loading';
-    loadingDiv.className = 'logout-loading';
-    loadingDiv.textContent = message;
-    document.body.appendChild(loadingDiv);
-  }
-
-  /**
-   * Remove indicador de loading
-   */
-  hideLoading() {
-    const loading = document.getElementById('logout-loading');
-    if (loading) {
-      loading.remove();
-    }
   }
 }
 
