@@ -14,18 +14,9 @@
   <!-- <meta property="og:image" content="URL_DA_IMAGEM_DE_DESTAQUE"> -->
   <!-- <meta property="og:url" content="https://site.com"> -->
 
-  <script>
-    // Este código executa imediatamente, antes de qualquer renderização
-    (function () {
-      // Verificar token (localStorage, sessionStorage ou cookie)
-      const token = localStorage.getItem('token');
-
-      // Se não existir token, redirecionar para login
-      if (!token) {
-        console.log('Token não encontrado, redirecionando...');
-        window.location.href = 'login.html';
-      }
-    })();
+  <script type="module">
+    import { verificarAutenticacao } from '../js/auth-manager.js';
+    verificarAutenticacao();
   </script>
 
   <link rel="icon" href="../img/favicon.svg" type="image/svg+xml" sizes="64x64">
@@ -48,6 +39,9 @@
         <li class="menu-admin-item"><a href="./mensagens.html">Mensagens</a></li>
         <li class="menu-admin-item"><a href="./formas-de-contato.html">Meus Dados</a></li>
       </ul>
+
+      <button data-action="logout" id="logout-button" class="text-primary font-primary-md">Sair</button>
+
     </nav>
   </header>
 
@@ -70,7 +64,9 @@
 
     </section>
   </main>
+  <script type="module" src="../js/auth-manager.js"></script>
   <script type="module" src="../js/mensagens.js"></script>
+
 </body>
 
 </html>
