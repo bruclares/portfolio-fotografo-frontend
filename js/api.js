@@ -1,6 +1,6 @@
-import getBackendURL from '../utils.js';
+import getBackendURL from './utils.js';
 
-export async function apiRequest(endpoint, method, data = null, auth = true) {
+export async function apiRequest(endpoint, method, auth = true, data = null) {
   const headers = {
     'Content-Type': 'application/json',
   };
@@ -10,7 +10,7 @@ export async function apiRequest(endpoint, method, data = null, auth = true) {
     if (!token) {
       // redireciona para login se não tiver token
       window.location.href = 'login.html';
-      return;
+      return Promise.reject(new Error('Token não encontrado'));
     }
     headers['Authorization'] = `Bearer ${token}`;
   }
@@ -28,7 +28,8 @@ export async function apiRequest(endpoint, method, data = null, auth = true) {
     const response = await fetch(`${getBackendURL()}${endpoint}`, config);
 
     if (!response.ok) {
-      const errorData = await response.json();
+      const errorData = await response.json().catch(() => ({}));
+      console.error('Detalhe do erro:', errorData);
       throw new Error(errorData.erro || 'Erro na requisição');
     }
 
