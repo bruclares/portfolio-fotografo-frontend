@@ -1,4 +1,5 @@
 import getBackendURL from './utils.js';
+import { apiRequest } from './api.js';
 
 // Variável global para armazenar o cursor da próxima página
 let proximaPagina = null;
@@ -11,80 +12,54 @@ let fotoAtualIndex = 0;
 
 // Função para obter as fotos do servidor
 function obterFotos(pasta) {
-  // Criando o objeto de dados para enviar ao servidor - Dados da requisição
-  const dados = {
-    next_cursor: proximaPagina,
-    pasta: pasta, // Adiciona o nome da pasta ao objeto de dados
-  };
+  async function obterFotos(pasta) {
+    const dados = {
+      next_cursor: proximaPagina,
+      pasta: pasta,
+    };
 
-  // Exibir indicador de carregamento
-  const botao = document.querySelector('.proxima-pagina');
-  botao.textContent = 'Carregando...';
+    const botao = document.querySelector('.proxima-pagina');
+    botao.textContent = 'Carregando...';
 
-  // Fazendo a requisição para o servidor
-  fetch(`${getBackendURL()}/api/cloudinary/fotos`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(dados),
-  })
-    .then(function (resposta) {
-      // Converte a resposta para JSON
-      return resposta.json();
-    })
-    .then(function (dados) {
-      // Obtém o elemento da galeria onde as fotos serão exibidas
+    try {
+      const dadosResposta = await apiRequest(
+        '/api/cloudinary/fotos',
+        'POST',
+        false,
+        dados
+      );
+
       const galeria = document.getElementById('galeria-imagens');
 
-      // Para cada foto retornada, cria os elementos HTML
-      dados.fotos.forEach(function (foto) {
-        // Adiciona foto ao array de todas as fotos
+      dadosResposta.fotos.forEach((foto) => {
         todasFotos.push(foto);
 
-        // Cria uma div para conter a imagem
         const divImagem = document.createElement('div');
         divImagem.className = 'card-imagem';
 
-        // Cria o elemento de imagem
         const imagem = document.createElement('img');
         imagem.src = foto.url;
         imagem.alt = foto.nome;
 
-        // Adiciona evento de clique na imagem
-        divImagem.addEventListener('click', function () {
-          // Encontra o índice da foto no array de todas as fotos
+        divImagem.addEventListener('click', () => {
           const index = todasFotos.findIndex((item) => item.url === foto.url);
           abrirLightbox(index);
         });
 
-        // Adiciona a imagem dentro da div
         divImagem.appendChild(imagem);
-
-        // Adiciona a div na galeria
         galeria.appendChild(divImagem);
       });
 
-      // Armazena o cursor para a próxima página
-      proximaPagina = dados.proxima_pagina;
-
-      // Restaura o texto do botão
+      proximaPagina = dadosResposta.proxima_pagina;
       botao.textContent = 'Carregar mais';
 
-      // Se não houver mais fotos, esconde o botão
       if (!proximaPagina) {
         botao.style.display = 'none';
       }
-    })
-    .catch(function (erro) {
-      // Em caso de erro, mostra no console
+    } catch (erro) {
       console.error('Erro ao carregar as fotos:', erro);
-
-      // Restaura o texto do botão
-      const botao = document.querySelector('.proxima-pagina');
       botao.textContent = 'Carregar mais';
 
-      // Cria um elemento para mostrar o erro (se não existir)
       if (!document.getElementById('mensagem-erro')) {
         const mensagemErro = document.createElement('div');
         mensagemErro.id = 'mensagem-erro';
@@ -93,10 +68,10 @@ function obterFotos(pasta) {
         document.querySelector('.pagina-conteudo').appendChild(mensagemErro);
       }
 
-      // Exibe a mensagem de erro
       document.getElementById('mensagem-erro').textContent =
         'Não foi possível carregar as fotos. Verifique se o servidor está rodando.';
-    });
+    }
+  }
 }
 
 // Função para abrir o lightbox
