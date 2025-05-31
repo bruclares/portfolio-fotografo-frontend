@@ -1,4 +1,5 @@
-import getBackendURL, { getHtmlMensagem } from './utils.js';
+import { getHtmlMensagem } from './utils.js';
+import { apiRequest } from './api.js';
 
 document.addEventListener('DOMContentLoaded', async function () {
   // Elementos da página
@@ -19,22 +20,11 @@ document.addEventListener('DOMContentLoaded', async function () {
   // Função para carregar mensagens da API
   async function carregarMensagens() {
     try {
-      let resposta = await fetch(
-        `${getBackendURL()}/api/contatos?pagina=${paginaAtual}&por_pagina=${mensagensPorPagina}`,
-        {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${localStorage.getItem('token')}`,
-          },
-        }
+      const resposta = await apiRequest(
+        `/api/contatos?pagina=${paginaAtual}&por_pagina=${mensagensPorPagina}`,
+        'GET',
+        true
       );
-
-      resposta = await resposta.json();
-
-      if ('erro' in resposta) {
-        throw new Error(resposta.erro);
-      }
 
       // atualizar com dados paginados
       mensagens = resposta.dados;
@@ -44,12 +34,8 @@ document.addEventListener('DOMContentLoaded', async function () {
       atualizarPaginacao();
       exibirMensagens();
     } catch (erro) {
-      alerta.innerText = erro;
-      alerta.classList.add('alert-error');
-
-      if (!alerta.classList.contains('show')) {
-        alerta.classList.add('show');
-      }
+      alerta.innerText = erro.message || 'Erro ao carregar mensagens';
+      alerta.classList.add('alert-error', 'show');
     }
   }
 
