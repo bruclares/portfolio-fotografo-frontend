@@ -1,18 +1,12 @@
 import getBackendURL, { formatarTelefone } from './utils.js';
+import { apiRequest } from './api.js';
+
 let token = null;
 let id = null;
 
 document.addEventListener('DOMContentLoaded', async () => {
   try {
-    let resposta = await fetch(`${getBackendURL()}/api/formas-contato/admin`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${localStorage.getItem('token')}`,
-      },
-    });
-
-    resposta = await resposta.json();
+    const resposta = await apiRequest('/api/formas-contato/admin', 'GET', true);
 
     if ('erro' in resposta) {
       throw new Error(resposta.erro);
@@ -52,38 +46,19 @@ formularioFormasContato.addEventListener('submit', async (event) => {
   const dados = Object.fromEntries(dadosFormulario.entries());
 
   try {
-    let resposta = await fetch(`${getBackendURL()}/api/formas-contato/${id}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${localStorage.getItem('token')}`,
-      },
-      body: JSON.stringify(dados),
-    });
-
-    resposta = await resposta.json();
-    if ('erro' in resposta) {
-      throw new Error(resposta.erro);
-    }
-
+    const resposta = await apiRequest(
+      `/api/formas-contato/${id}`,
+      'POST',
+      true,
+      dados
+    );
     const alerta = document.querySelector('.alert');
     alerta.innerText = resposta.sucesso;
-
-    if (alerta.classList.contains('alert-error')) {
-      alerta.classList.remove('alert-error');
-    }
-    alerta.classList.add('alert-success');
-
-    if (!alerta.classList.contains('show')) {
-      alerta.classList.add('show');
-    }
+    alerta.classList.remove('alert-error');
+    alerta.classList.add('alert-success', 'show');
   } catch (erro) {
     const alerta = document.querySelector('.alert');
-    alerta.innerText = erro;
-    alerta.classList.add('alert-error');
-
-    if (!alerta.classList.contains('show')) {
-      alerta.classList.add('show');
-    }
+    alerta.innerText = erro.message || 'Erro ao salvar';
+    alerta.classList.add('alert-error', 'show');
   }
 });
