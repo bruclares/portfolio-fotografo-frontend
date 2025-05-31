@@ -1,4 +1,6 @@
 import getBackendURL from './utils.js';
+import { apiRequest } from './api.js';
+
 let token = null;
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -15,19 +17,12 @@ formularioNovaSenha.addEventListener('submit', async function (event) {
   dados.token = token;
 
   try {
-    let resposta = await fetch(`${getBackendURL()}/api/auth/resetar-senha`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(dados),
-    });
-
-    resposta = await resposta.json();
-
-    if ('erro' in resposta) {
-      throw new Error(resposta.erro);
-    }
+    const resposta = await apiRequest(
+      '/api/auth/resetar-senha',
+      'POST',
+      false,
+      dados
+    );
 
     formularioNovaSenha.reset();
 
