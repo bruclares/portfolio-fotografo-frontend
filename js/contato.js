@@ -1,22 +1,23 @@
+import { apiRequest } from './api.js';
 import getBackendURL, { formatarTelefone } from './utils.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   try {
-    let resposta = await fetch(`${getBackendURL()}/api/formas-contato`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-
-    resposta = await resposta.json();
+    const resposta = await apiRequest('/api/formas-contato', 'GET', false);
+    // Verifica se a resposta tem a estrutura esperada
+    if (
+      !resposta ||
+      !resposta.redesocial_perfil ||
+      !resposta.email ||
+      !resposta.telefone
+    ) {
+      throw new Error('Dados de contato incompletos na resposta da API');
+    }
 
     const redeSocial = document.getElementById('redesocial');
     let redeSocialPerfil = resposta.redesocial_perfil.slice(
       resposta.redesocial_perfil.lastIndexOf('/') + 1
     );
-
-    console.log(resposta);
 
     if (!redeSocialPerfil.includes('@')) {
       redeSocialPerfil = '@' + redeSocialPerfil;
@@ -45,15 +46,7 @@ formulario.addEventListener('submit', async function (event) {
   const dados = Object.fromEntries(dadosFormulario.entries());
 
   try {
-    let resposta = await fetch(`${getBackendURL()}/api/contatos`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(dados),
-    });
-
-    resposta = await resposta.json();
+    const resposta = await apiRequest('/api/contatos', 'POST', false, dados);
 
     if ('erro' in resposta) {
       throw new Error(resposta.erro);
