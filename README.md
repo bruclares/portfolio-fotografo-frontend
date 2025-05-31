@@ -65,7 +65,6 @@ portfolio-fotografo-frontend
 │     └─ logo-small.svg
 ├─ index.html
 ├─ js
-│  ├─ admin.-init.js
 │  ├─ api.js
 │  ├─ auth-manager.js
 │  ├─ contato.js
