@@ -1,4 +1,5 @@
-import getBackendURL from '../js/utils.js';
+import getBackendURL from './utils.js';
+import { apiRequest } from './api.js';
 
 class AuthManager {
   constructor() {
@@ -16,26 +17,9 @@ class AuthManager {
   async logout() {
     try {
       const token = this.getToken();
-
-      if (token) {
-        // chama endpoint de logout no backend
-        const response = await fetch(`${this.baseURL}/auth/logout`, {
-          method: 'POST',
-          headers: {
-            Authorization: `Bearer ${token}`,
-            'Content-Type': 'application/json',
-          },
-        });
-
-        const data = await response.json();
-
-        if (!response.ok) {
-          console.warn('Erro no logout do servidor:', data.erro);
-          // Mesmo com erro no servidor, continuamos com logout local
-        }
-      }
+      await apiRequest('/api/auth/logout', 'POST', true);
     } catch (error) {
-      console.error('Erro na comunicação com o servidor:', error);
+      console.error('Erro no logout do servidor:', error);
       // Mesmo com erro de rede, fazemos logout local
     } finally {
       // SEMPRE executa a limpeza local
