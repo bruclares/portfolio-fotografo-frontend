@@ -1,4 +1,3 @@
-import getBackendURL from './utils.js';
 import { apiRequest } from './api.js';
 
 // Variável global para armazenar o cursor da próxima página
@@ -11,7 +10,6 @@ let todasFotos = [];
 let fotoAtualIndex = 0;
 
 // Função para obter as fotos do servidor
-function obterFotos(pasta) {
   async function obterFotos(pasta) {
     const dados = {
       next_cursor: proximaPagina,
@@ -72,7 +70,7 @@ function obterFotos(pasta) {
         'Não foi possível carregar as fotos. Verifique se o servidor está rodando.';
     }
   }
-}
+
 
 // Função para abrir o lightbox
 function abrirLightbox(index) {
